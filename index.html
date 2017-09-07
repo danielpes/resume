@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>Daniel de Paula's CV</title>
+    <link rel='stylesheet' href='stylesheets/bootstrap.min.css'>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:700|Montserrat:400,400i,500,600" rel="stylesheet">
+    <link rel='stylesheet' href='font-awesome/css/font-awesome.min.css'>
+    <link rel='stylesheet' href='stylesheets/style.css'>
+    <script type="text/javascript">
+        function doPrint(){
+            window.print();
+        }
+
+        function toggleBorders(on){
+            var divs = document.getElementsByTagName("div");
+            for (var i = 0; i < divs.length; i++) {
+                var el = divs[i];
+                if (on) {
+                    el.className += ' withBorder';
+                } else {
+                    el.className = el.className.replace(' withBorder', '');
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="page">
+    <div id="content">
+
+        <div id="header">
+            <div id="title">
+                <span>Daniel de Paula</span>
+            </div>
+            <div id="buttons" style="float: right">
+                <button class="noprint btn btn-default btn-sm" onclick="doPrint()"><i class="fa fa-fw fa-print"></i></button>
+                <!--<a class="noprint btn btn-default btn-sm" href="CV_DanielDePaula.pdf" download="CV.pdf">-->
+                    <!--<i class="fa fa-fw fa-file-pdf-o" style="font-size: 10pt"></i>-->
+                <!--</a>-->
+            </div>
+            <div id="about">
+                <span id="stitle">Big Data Engineer</span>
+                <span class="info">Brazilian | 26 years old | Married</span>
+                <span class="info">Availble from August 2018</span>
+            </div>
+            <div id="contact" class="has-icons">
+                <i class="fa fa-fw fa-home" style="font-size: 1.5em"></i>
+                <span>Paris Area | France</span>
+                <i class="fa fa-fw fa-phone" style="font-size: 1.4em"></i>
+                <span>+33 6 58 61 07 68</span>
+                <i class="fa fa-fw fa-envelope" style="font-size: 1.15em"></i>
+                <span>contact@danielpes.me</span>
+            </div>
+        </div>
+
+        <div id="left-col" class="main-col">
+            <div id="jobs">
+                <span class="sec-title">Experience</span>
+
+                <div class="item">
+                    <div class="item-header">
+                        <div>
+                            <span class="item-title"><b>École Polytechnique</b></span>
+                            <span class="loc">| Palaiseau | France</span>
+                        </div>
+                        <span class="role">Big Data Engineer</span>
+                    </div>
+                    <span class="date"><b>JUL 2016 - PRESENT</b></span>
+                    <p>
+                        As part of the Data Science Initiative, I work in a project in partnership with the French
+                        national health insurance fund (CNAMTS), being one of the main engineers implementing a big data
+                        pipeline in Spark for processing over 3TBs of raw medical data into features for ML models.
+                    </p>
+                </div>
+
+
+                <div class="item">
+                    <div class="item-header">
+                        <div>
+                            <span class="item-title"><b>Icaro Tech</b></span>
+                            <span class="loc">| Campinas, SP | Brazil</span>
+                        </div>
+                        <span class="role">R&D Engineer</span>
+                    </div>
+                    <span class="date"><b>JAN 2015 - JUN 2016</b> | 1.5 year</span>
+                    <p>
+                        At first, I worked with data analysis and visualization with R and SQL, then I started
+                        contributing to the company’s products development with code, management tasks and decision
+                        making.
+                    </p>
+                </div>
+
+
+                <div class="item">
+                    <div class="item-header">
+                        <div>
+                            <span class="item-title"><b>Icaro Tech</b></span>
+                            <span class="loc"> | Campinas, SP | Brazil</span>
+                        </div>
+                        <span class="role">Intern</span>
+                    </div>
+                    <span class="date"><b>JAN 2014 - DEC 2014</b> | 1 year</span>
+                    <p>
+                        I started as a presales intern, working with price estimation and PoCs; then I changed to R&D to
+                        focus on data analysis and visualization.
+                    </p>
+                </div>
+
+
+                <div class="item">
+                    <div class="item-header">
+                        <div>
+                            <span class="item-title"><b>Lince</b></span>
+                            <span class="loc"> | Sao Carlos, SP | Brazil</span>
+                        </div>
+                        <span class="role">Web Development Intern</span>
+                    </div>
+                    <span class="date"><b>JAN 2012 - AUG 2012</b> | 8 months</span>
+                    <p>
+                        I used Javascript, CSS and HTML to contribute to the creation of the tool WebNCL, a web player for
+                        NCL multimedia documents.
+                    </p>
+                </div>
+            </div>
+
+            <div id="edu">
+
+                <span class="sec-title">Education</span>
+
+                <div class="item">
+                    <div class="item-header">
+                        <div>
+                            <span class="item-title"><b>Univ. Federal de Sao Carlos</b></span>
+                            <span class="loc"> | Sao Carlos, SP | Brazil</span>
+                        </div>
+                        <span class="role">Computer Engineering</span>
+                    </div>
+                    <span class="date"><b>JAN 2009 - DEC 2014</b></span>
+                    <p>
+                        Final project in machine learning for telecom.
+                    </p>
+                </div>
+                <div class="item">
+                    <div class="item-header">
+                        <div>
+                            <span class="item-title"><b>University of Birmingham</b></span>
+                            <span class="loc"> | Birmingham | UK</span>
+                        </div>
+                        <span class="role">Exchange Program (CS)</span>
+                    </div>
+                    <span class="date"><b>SEP 2012 - AUG 2013</b></span>
+                    <p>
+                        One year as an exchange student with a final project in robotics.
+                    </p>
+                </div>
+            </div>
+
+            <div id="prj">
+
+                <span class="sec-title">Projects</span>
+
+                <div class="item">
+                    <div class="item-header">
+                        <a target="_blank" href="https://github.com/danielpes/spark-datetime-lite">
+                            <span class="item-title">
+                                <i class="fa fa-github lg"></i>
+                                <b>Spark DateTime Lite&nbsp&nbsp</b>
+                            </span>
+                        </a>
+                        <a target="_blank" href="https://github.com/danielpes/spark-datetime-lite" class="print-only">
+                            <span class="print-only">github.com/danielpes/spark-datetime-lite</span>
+                        </a>
+                    </div>
+                    <span class="date"><b>DEC 2016 - PRESENT</b></span>
+                    <p>
+                        A lightweight, dependency-free library for extending Spark's date and timestamp operations.
+                        100% Scala with automated tests.
+                    </p>
+                </div>
+
+            </div>
+
+            <div id="hobbies">
+                <span class="sec-title">Hobbies</span>
+                <span id="hob-list">Cinema | Chess | Digital Games | Football (Soccer) | Table-Tennis | TV Series</span>
+            </div>
+        </div>
+
+        <div id="right-col" class="main-col">
+
+            <div id="skills">
+                <span class="sec-title">Skills</span>
+                <div class="skills-list">
+                    <span class="skill-name">Apache Spark</span>
+                    <span>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                    </span>
+
+                    <span class="skill-name">Scala</span>
+                    <span>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                    </span>
+
+                    <span class="skill-name">SQL</span>
+                    <span>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                    </span>
+
+                    <span class="skill-name">Git</span>
+                    <span>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                    </span>
+
+                    <span class="skill-name">Unix</span>
+                    <span>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                    </span>
+
+                    <span class="skill-name">Web (front-end)</span>
+                    <span>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                    </span>
+
+                    <span class="skill-name">Python</span>
+                    <span>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                    </span>
+
+                    <span class="skill-name">Java</span>
+                    <span>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                    </span>
+
+                    <span class="skill-name">Node.js</span>
+                    <span>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                    </span>
+
+                    <span class="skill-name">Mach. Learning</span>
+                    <span>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                    </span>
+                </div>
+            </div>
+            <div id="langs">
+                <span class="sec-title">Languages</span>
+                <div class="skills-list">
+                    <span class="skill-name">Portuguese</span>
+                    <span>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                    </span>
+
+                    <span class="skill-name">English</span>
+                    <span>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                    </span>
+
+                    <span class="skill-name">French</span>
+                    <span>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                    </span>
+
+                    <span class="skill-name">Spanish</span>
+                    <span>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle"></i>
+                    </span>
+                </div>
+            </div>
+            <div id="links">
+                <span class="sec-title">Online</span>
+                <div id="links-list" class="has-icons">
+                    <i class="fa fa-fw fa-linkedin-square" style="font-size: 1.4em"></i>
+                    <a href="http://linkedin.com/in/danieldepaula">
+                        <span>linkedin.com/in/danieldepaula</span>
+                    </a>
+                    <i class="fa fa-fw fa-github" style="font-size: 1.4em"></i>
+                    <a href="http://github.com/danielpes">
+                        <span>github.com/danielpes</span>
+                    </a>
+                    <i class="fa fa-fw fa-stack-overflow" style="font-size: 1.2em"></i>
+                    <a href="http://stackoverflow.com/users/3864822/">
+                        <span>stackoverflow.com/users/3864822/</span>
+                    </a>
+                </div>
+
+            </div>
+            <div id="acc">
+                <span class="sec-title">Acomplishments</span>
+                <div id="acc-content" class="sec-content">
+                    <p>
+                        Currently in the <b>top 1%</b> for the <i>apache-spark</i> tag on <b>StackOverflow</b>
+                    </p>
+                    <p>
+                        Currently in the <b>top 5%</b> for the <i>scala</i> and pyspark tags on <b>StackOverflow</b>
+                    </p>
+                    <p>
+                        <b>Co-author</b> of the <b>award-winning</b> short paper “WebNCL: a web-based pre&shy;sentation
+                        machine for multimedia documents” in 2012
+                    </p>
+                </div>
+            </div>
+            <div id="rec">
+                <span class="sec-title">Recommendation</span>
+                <div id="rec-content">
+                    <p class="quote">
+                        “I believe Daniel is one of the
+                        most talented and enjoyable
+                        persons I've ever worked with. I
+                        definitely recommend him to
+                        any team”
+                    </p>
+
+                    <div class="quote-author">
+                        <span><b>Fernando Moraes</b></span><br/>
+                        <span>Former R&D Manager at Icaro Tech</span><br/>
+                        <span>(Full text on LinkedIn)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,199 @@
+@page {
+  size: A4;
+  margin: 0; }
+@media print {
+  .noprint {
+    visibility: hidden; } }
+html {
+  font-size: 12px; }
+
+body {
+  background-color: #ddd;
+  font: 400 1rem 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0; }
+
+div {
+  box-sizing: border-box;
+  display: block; }
+
+p {
+  text-align: justify;
+  margin: 0;
+  line-height: 1.5em; }
+
+a {
+  color: #000;
+  text-decoration: none; }
+  a:link, a:hover, a:visited, a:active {
+    color: #000;
+    text-decoration: none; }
+
+.withBorder {
+  border: 1px dotted gray; }
+
+.fa {
+  justify-self: center; }
+
+#page {
+  width: 65em;
+  height: 100%;
+  min-height: 91.93em;
+  background-color: white;
+  margin: 0 auto;
+  display: block; }
+
+#content {
+  background-color: white;
+  margin: 0 4em;
+  display: grid;
+  grid-column-gap: 3.5em;
+  grid-row-gap: 3em;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 63% 1fr;
+  align-content: space-between; }
+
+#header {
+  margin-top: 3em;
+  display: grid;
+  grid-column-gap: inherit;
+  grid-column: 1 / 3;
+  grid-template-columns: inherit;
+  grid-template-rows: auto auto; }
+  #header #title {
+    font: bold 2.5em "Merriweather", serif; }
+
+#buttons {
+  justify-self: end; }
+
+#about {
+  display: grid;
+  align-content: space-between; }
+  #about #stitle {
+    font-size: 1.4em; }
+  #about .info {
+    color: #434343; }
+
+#contact, #links-list {
+  display: grid;
+  align-content: space-between;
+  align-items: center;
+  grid-column-gap: 0.7em;
+  grid-row-gap: 0.3em;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1.1em auto; }
+
+#jobs {
+  font-size: 1rem; }
+
+#edu {
+  font-size: 0.95rem; }
+
+#right-col {
+  font-size: 0.9em; }
+
+#prj .item-header {
+  grid-template-columns: auto 1fr;
+  align-items: baseline; }
+  #prj .item-header .print-only {
+    display: none;
+    justify-self: end;
+    font-style: italic; }
+  @media print {
+    #prj .item-header .print-only {
+      font-size: 0.9em;
+      display: inline; } }
+
+.main-col {
+  display: grid;
+  align-items: start;
+  grid-template-rows: auto;
+  grid-row-gap: 3em;
+  align-content: space-between; }
+
+.sec-title {
+  color: #2079c7;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-transform: uppercase; }
+
+.item {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto; }
+
+.item-header {
+  display: grid;
+  align-items: end;
+  margin-top: 1em;
+  margin-bottom: 0.5em; }
+
+.item-title {
+  font-size: 1.1em; }
+  .item-title .fa.lg {
+    font-size: 1.2em; }
+  .item-title .fa.sm {
+    font-size: 0.8em; }
+
+.date {
+  margin-bottom: 0.5em;
+  font-size: 0.95em;
+  color: #666666; }
+
+.role {
+  font-style: italic;
+  grid-column: 2 / 3;
+  justify-self: end; }
+
+#hobbies {
+  font-size: 0.95em;
+  display: grid; }
+  #hobbies #hob-list {
+    margin-top: 1em;
+    text-align-last: justify; }
+
+.skills-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-column-gap: 0.7em;
+  grid-row-gap: 0.5em;
+  margin-top: 1em; }
+  .skills-list .skill-name {
+    justify-self: end; }
+  .skills-list .fa {
+    font-size: 0.7em;
+    color: #434343; }
+
+#links-list {
+  margin-top: 1em;
+  grid-row-gap: 0.5em; }
+
+#acc-content {
+  margin-top: 1em;
+  display: grid;
+  grid-row-gap: 1em; }
+  #acc-content b {
+    font-weight: 500; }
+
+p.quote {
+  margin-left: 2em;
+  padding-left: 0.7em;
+  border-left: 3px solid #b7b7b7;
+  color: #666666;
+  font-style: italic; }
+
+#rec-content {
+  margin-top: 1em;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  grid-row-gap: 1em; }
+
+.quote-author {
+  justify-self: end;
+  text-align: right;
+  display: block; }
+
+/*# sourceMappingURL=style.css.map */
