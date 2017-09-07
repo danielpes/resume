@@ -5,7 +5,7 @@
     --c-gray: #666666;
     --c-section: #2079c7;
     --base-font-size: 9pt;
-    --debug-border: 1px dotted gray
+    --debug-border: 1px dotted black;
 }
 
 @page {
@@ -13,6 +13,7 @@
     margin: 0;
 }
 body {
+    background-color: lightgray;
     font: normal var(--base-font-size) 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
@@ -22,6 +23,8 @@ h1 {
     padding: 0;
 }
 #page {
+    background-color: white;
+    left: calc(50% - 21cm/2);
     width: 21cm;
     height: 297mm;
     border: var(--debug-border);
@@ -65,6 +68,7 @@ span {
 
 }
 .col-header {
+    border-bottom: var(--debug-border);
     height: 3cm;
 }
 .title {
