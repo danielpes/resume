@@ -64,16 +64,12 @@ p {
     margin: 0;
     padding: 0;
 }
-span {
-
-}
 .col-header {
     border-bottom: var(--debug-border);
     height: 3cm;
 }
 .title {
-    font-size: 24pt;
-    font-family: "Merriweather", serif;
+    font: bold 24pt "Merriweather", serif;
 }
 .section {
     color: var(--c-section);
