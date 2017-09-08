@@ -5,7 +5,7 @@
     --c-gray: #666666;
     --c-section: #2079c7;
     --base-font-size: 9pt;
-    --debug-border: 1px dotted white;
+    --debug-border: 1px dotted gray;
 }
 
 @page {
@@ -30,6 +30,9 @@ h1 {
     border: var(--debug-border);
     position: relative;
 }
+div {
+    border: var(--debug-border);
+}
 #main {
     margin: 1.5cm;
     position: relative;
@@ -40,14 +43,12 @@ h1 {
     height: 100%;
     width: 11cm;
     float: left;
-    border: var(--debug-border);
 }
 #right-col {
     position: absolute;
     height: 100%;
     margin-left: 12cm;
     width: 6cm;
-    border: var(--debug-border);
     /* Change this to whatever the width of your left column is*/
 }
 .clear {
@@ -65,13 +66,12 @@ p {
     padding: 0;
 }
 .col-header {
-    border-bottom: var(--debug-border);
     height: 3cm;
 }
 .title {
     font: bold 24pt "Merriweather", serif;
 }
-.section {
+.stitle {
     color: var(--c-section);
     margin-top: 24pt;
     margin-bottom: 0;
