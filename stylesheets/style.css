@@ -69,7 +69,7 @@ p {
     height: 3cm;
 }
 .title {
-    font: bold 24pt "Merriweather", serif;
+    font: 700 24pt "Merriweather", serif;
 }
 .stitle {
     color: var(--c-section);
