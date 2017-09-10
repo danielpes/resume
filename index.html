@@ -23,17 +23,18 @@
     </script>
 </head>
 <body>
-
 <div id="page">
-    <button class="noprint" onclick="toggleBorders()">toggle</button>
+    <button class="noprint btn btn-default btn-sm" onclick="toggleBorders()">borders</button>
     <div id="content">
         <div id="header">
             <div id="title">
-                <span>Daniel de Paula</span><br/>
+                <span>Daniel de Paula</span>
             </div>
             <div id="buttons" style="float: right">
-                <button class="noprint btn btn-default" onclick="doPrint()"><i class="fa fa-print"></i></button>
-                <a class="noprint btn btn-default" href="CV_DanielDePaula.pdf" download="CV.pdf"><i class="fa fa-file-pdf-o" style="font-size: 10pt"></i></a><br/>
+                <button class="noprint btn btn-default btn-sm" onclick="doPrint()"><i class="fa fa-fw fa-print"></i></button>
+                <a class="noprint btn btn-default btn-sm" href="CV_DanielDePaula.pdf" download="CV.pdf">
+                    <i class="fa fa-fw fa-file-pdf-o" style="font-size: 10pt"></i>
+                </a>
             </div>
             <div id="me">
                 <span id="stitle">Big Data Engineer</span>
@@ -41,21 +42,116 @@
                 <span class="info">Availble from August 2018</span>
             </div>
             <div id="contact" class="has-icons">
-                <span>Paris Area | France</span>
                 <i class="fa fa-home" style="font-size: 14pt"></i>
+                <span>Paris Area | France</span>
+                <i class="fa fa-phone" style="font-size: 13pt"></i>
                 <span>+33 6 58 61 07 68</span>
-                <i class="fa fa-phone" style="font-size: 14pt"></i>
+                <i class="fa fa-envelope" style="font-size: 11pt"></i>
                 <span>contact@danielpes.me</span>
-                <i class="fa fa-envelope" style="font-size: 12pt"></i>
+
             </div>
         </div>
         <div id="left-col" class="main-col">
-            <div id="xp">
 
+            <div id="xp">
+                <span class="sec-title">Experience</span>
+
+                <div class="inst-item">
+                    <div class="item-header">
+                        <div>
+                            <span class="inst"><b>École Polytechnique</b></span>
+                            <span class="loc">| Palaiseau | France</span>
+                        </div>
+                        <span class="role">Big Data Engineer</span>
+                    </div>
+                    <span class="date"><b>JUL 2016 - PRESENT</b></span>
+                    <p>
+                        As part of the Data Science Initiative, I work in a project in partnership with the French
+                        national health insurance fund (CNAMTS), being one of the main engineers implementing a big data
+                        pipeline in Spark for processing over 3TBs of raw medical data into features for ML models.
+                    </p>
+                </div>
+
+
+                <div class="inst-item">
+                    <div class="item-header">
+                        <div>
+                            <span class="inst"><b>Icaro Tech</b></span>
+                            <span class="loc">| Campinas, SP | Brazil</span>
+                        </div>
+                        <span class="role">R&D Engineer</span>
+                    </div>
+                    <span class="date"><b>JAN 2015 - JUN 2016</b> | 1.5 year</span>
+                    <p>
+                        At first, I worked with data analysis and visualization with R and SQL, then I started
+                        contributing to the company’s products development with code, management tasks and decision
+                        making.
+                    </p>
+                </div>
+
+
+                <div class="inst-item">
+                    <div class="item-header">
+                        <div>
+                            <span class="inst"><b>Icaro Tech</b></span>
+                            <span class="loc"> | Campinas, SP | Brazil</span>
+                        </div>
+                        <span class="role">Intern</span>
+                    </div>
+                    <span class="date"><b>JAN 2014 - DEC 2014</b> | 1 year</span>
+                    <p>
+                        I started as a presales intern, working with price estimation and PoCs; then I changed to R&D to
+                        focus on data analysis and visualization.
+                    </p>
+                </div>
+
+
+                <div class="inst-item">
+                    <div class="item-header">
+                        <div>
+                            <span class="inst"><b>Lince</b></span>
+                            <span class="loc"> | Sao Carlos, SP | Brazil</span>
+                        </div>
+                        <span class="role">Web Development Intern</span>
+                    </div>
+                    <span class="date"><b>JAN 2012 - AUG 2012</b> | 8 months</span>
+                    <p>
+                        I used Javascript, CSS and HTML to contribute to the creation of the tool WebNCL, a web player for
+                        NCL multimedia documents.
+                    </p>
+                </div>
             </div>
 
             <div id="edu">
 
+                <span class="sec-title">Education</span>
+
+                <div class="inst-item">
+                    <div class="item-header">
+                        <div>
+                            <span class="inst"><b>Univ. Federal de Sao Carlos</b></span>
+                            <span class="loc"> | Sao Carlos, SP | Brazil</span>
+                        </div>
+                        <span class="role">Computer Engineering</span>
+                    </div>
+                    <span class="date"><b>JAN 2009 - DEC 2014</b></span>
+                    <p>
+                        Final project in machine learning for telecom.
+                    </p>
+                </div>
+                <div class="inst-item">
+                    <div class="item-header">
+                        <div>
+                            <span class="inst"><b>University of Birmingham</b></span>
+                            <span class="loc"> | Birmingham | UK</span>
+                        </div>
+                        <span class="role">Exchange Program (CS)</span>
+                    </div>
+                    <span class="date"><b>SEP 2012 - AUG 2013</b></span>
+                    <p>
+                        One year as an exchange student with a final project in robotics.
+                    </p>
+                </div>
             </div>
 
             <div id="prj">
