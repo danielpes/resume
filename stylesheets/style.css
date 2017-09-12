@@ -5,7 +5,7 @@
     --c-gray: #666666;
     --c-section: #2079c7;
     --fsize: 9pt;
-    --debug-border: 0px dotted gray;
+    --debug-border: 1px dotted gray;
 }
 
 @page {
@@ -28,7 +28,6 @@ body {
 
 div {
     box-sizing: border-box;
-    border: var(--debug-border)
 }
 
 p {
@@ -43,7 +42,6 @@ p {
     min-height: 21cm;
     background-color: white;
     margin: auto;
-    border: var(--debug-border);
     position: relative;
 }
 
@@ -158,4 +156,8 @@ p {
 
 #edu {
     font-size: calc(var(--fsize) - 1pt);
+}
+
+.withBorder {
+    border: var(--debug-border);
 }

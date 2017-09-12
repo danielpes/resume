@@ -12,19 +12,22 @@
             window.print();
         }
 
-        function toggleBorders(){
+        function toggleBorders(on){
             var divs = document.getElementsByTagName("div");
             for (var i = 0; i < divs.length; i++) {
-                var curBorderWidth = divs[i].style.borderWidth;
-                if (curBorderWidth === "1px") divs[i].style.borderWidth = "0px";
-                else divs[i].style.borderWidth = "1px";
+                var el = divs[i];
+                if (on) {
+                    el.className += ' withBorder';
+                } else {
+                    el.className = el.className.replace(' withBorder', '');
+                }
             }
         }
     </script>
 </head>
 <body>
 <div id="page">
-    <button class="noprint btn btn-default btn-sm" onclick="toggleBorders()">borders</button>
+    <label><input type="checkbox" onclick="toggleBorders(this.checked)"/> borders</label>
     <div id="content">
         <div id="header">
             <div id="title">
