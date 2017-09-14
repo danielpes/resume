@@ -1,11 +1,3 @@
-:root {
-  --c-darkest: #000;
-  --c-dark: #353535;
-  --c-darkgray: #434343;
-  --c-gray: #666666;
-  --c-section: #2079c7;
-  --debug-border: 1px dotted gray; }
-
 @page {
   size: A4;
   margin: 0; }
@@ -13,14 +5,8 @@
   .noprint {
     visibility: hidden; } }
 html {
-  font-size: 11px; }
+  font-size: 12px; }
 
-@media screen and (min-height: 900px) {
-  html {
-    font-size: 12px; } }
-@media screen and (min-height: 1100px) {
-  html {
-    font-size: 13px; } }
 body {
   background-color: #ddd;
   font: 400 1rem 'Montserrat', sans-serif;
@@ -35,19 +21,29 @@ p {
   margin: 0;
   line-height: 1.5em; }
 
+a {
+  color: #000;
+  text-decoration: none; }
+  a:link, a:hover, a:visited, a:active {
+    color: #000;
+    text-decoration: none; }
+
+.withBorder {
+  border: 1px dotted gray; }
+
+.fa {
+  justify-self: center; }
+
 #page {
   width: 65em;
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
   background-color: white;
   margin: auto;
-  position: relative; }
+  display: block; }
 
 #content {
-  position: absolute;
-  top: 4em;
-  right: 4em;
-  bottom: 4em;
-  left: 4em;
+  margin: 4em;
   display: grid;
   grid-column-gap: 4em;
   grid-row-gap: 2em;
@@ -60,73 +56,77 @@ p {
   grid-column: 1 / 3;
   grid-template-columns: inherit;
   grid-template-rows: auto auto; }
+  #header #title {
+    font: bold 2.5em "Merriweather", serif; }
 
-#me, #contact {
+#buttons {
+  justify-self: end; }
+
+#about {
   display: grid;
   align-content: space-between; }
-
-#me .info {
-  color: var(--c-darkgray); }
-
-#title {
-  font: bold 2.5em "Merriweather", serif; }
-
-#me #stitle {
-  font-size: 1.4em; }
+  #about #stitle {
+    font-size: 1.4em; }
+  #about .info {
+    color: #434343; }
 
 #contact {
   display: grid;
+  align-content: space-between;
   align-items: center;
   grid-column-gap: 0.7em;
   grid-template-rows: 1.6em 1.6em 1.6em;
   grid-template-columns: 1.1em auto; }
 
-#buttons {
-  justify-self: end; }
+#jobs {
+  font-size: 1rem; }
 
 #edu {
   font-size: 0.95rem; }
-
-.inst-item {
-  display: grid;
-  justify-content: space-between;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto; }
-
-.inst {
-  font-size: 1.1em; }
 
 .main-col {
   display: grid;
   grid-template-rows: auto;
   grid-row-gap: 2em; }
 
-.fa {
-  justify-self: center; }
-
 .sec-title {
-  color: var(--c-section);
+  color: #2079c7;
   font-weight: 600;
   font-size: 1.2rem;
   text-transform: uppercase; }
 
+.item {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto; }
+
 .item-header {
   display: grid;
   align-items: end;
-  margin-bottom: 0.5em;
-  margin-top: 1em; }
+  margin-top: 1em;
+  margin-bottom: 0.5em; }
+
+.item-title {
+  font-size: 1.1em; }
+  .item-title .fa {
+    font-size: 0.8em; }
 
 .date {
   margin-bottom: 0.5em;
   font-size: 0.95em;
-  color: var(--c-gray); }
+  color: #666666; }
 
 .role {
   font-style: italic;
   grid-column: 2 / 3;
   justify-self: end; }
 
-.withBorder {
-  border: var(--debug-border); }
+#hobbies {
+  font-size: 0.95em;
+  display: grid; }
+  #hobbies #hob-list {
+    margin-top: 1em;
+    text-align-last: justify; }
 
 /*# sourceMappingURL=style.css.map */
