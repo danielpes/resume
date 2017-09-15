@@ -6,6 +6,7 @@ $c-darkest: #000;
 $c-dark: #353535;
 $c-darkgray: #434343;
 $c-gray: #666666;
+$c-lightgray: #b7b7b7;
 $c-section: #2079c7;
 $c-main: #000;
 
@@ -63,22 +64,25 @@ a {
 #page {
   width: 65em;
   height: 100%;
-  min-height: 100vh;
+  min-height: 91.93em;
   background-color: white;
-  margin: auto;
+  margin: 0 auto;
   display: block;
 }
 
 #content {
-  margin: 4em;
+  background-color: white;
+  margin: 0 4em;
   display: grid;
   grid-column-gap: 3.5em;
-  grid-row-gap: 2em;
+  grid-row-gap: 3em;
   grid-template-rows: auto 1fr;
   grid-template-columns: 63% 1fr;
+  align-content: space-between;
 }
 
 #header {
+  margin-top: 3em;
   display: grid;
   grid-column-gap: inherit;
   grid-column: 1 / 3;
@@ -129,11 +133,34 @@ a {
   font-size: 0.9em;
 }
 
+#prj {
+
+  .item-header {
+
+    grid-template-columns: auto 1fr;
+    align-items: baseline;
+
+    .print-only {
+      display: none;
+      justify-self: end;
+      font-style: italic;
+    }
+
+    @media print {
+      .print-only {
+        font-size: 0.9em;
+        display: inline;
+      }
+    }
+  }
+}
+
 .main-col {
   display: grid;
   align-items: start;
   grid-template-rows: auto;
-  grid-row-gap: 2em;
+  grid-row-gap: 3em;
+  align-content: space-between;
 }
 
 .sec-title {
@@ -212,4 +239,36 @@ a {
 #links-list {
   margin-top: 1em;
   grid-row-gap: 0.5em;
+}
+
+#acc-content {
+  margin-top: 1em;
+  display: grid;
+  grid-row-gap: 1em;
+
+  b {
+    font-weight: 500;
+  }
+}
+
+p.quote {
+  margin-left: 2em;
+  padding-left: 0.7em;
+  border-left: 3px solid $c-lightgray;
+  color: $c-gray;
+  font-style: italic;
+}
+
+#rec-content {
+  margin-top: 1em;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  grid-row-gap: 1em;
+}
+
+.quote-author {
+  justify-self: end;
+  text-align: right;
+  display: block;
 }
