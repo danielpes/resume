@@ -14,7 +14,8 @@ body {
   padding: 0; }
 
 div {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  display: block; }
 
 p {
   text-align: justify;
@@ -45,10 +46,10 @@ a {
 #content {
   margin: 4em;
   display: grid;
-  grid-column-gap: 4em;
+  grid-column-gap: 3.5em;
   grid-row-gap: 2em;
   grid-template-rows: auto 1fr;
-  grid-template-columns: 65% auto; }
+  grid-template-columns: 63% 1fr; }
 
 #header {
   display: grid;
@@ -70,12 +71,13 @@ a {
   #about .info {
     color: #434343; }
 
-#contact {
+#contact, #links-list {
   display: grid;
   align-content: space-between;
   align-items: center;
   grid-column-gap: 0.7em;
-  grid-template-rows: 1.6em 1.6em 1.6em;
+  grid-row-gap: 0.3em;
+  grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1.1em auto; }
 
 #jobs {
@@ -84,8 +86,12 @@ a {
 #edu {
   font-size: 0.95rem; }
 
+#right-col {
+  font-size: 0.9em; }
+
 .main-col {
   display: grid;
+  align-items: start;
   grid-template-rows: auto;
   grid-row-gap: 2em; }
 
@@ -109,7 +115,9 @@ a {
 
 .item-title {
   font-size: 1.1em; }
-  .item-title .fa {
+  .item-title .fa.lg {
+    font-size: 1.2em; }
+  .item-title .fa.sm {
     font-size: 0.8em; }
 
 .date {
@@ -128,5 +136,22 @@ a {
   #hobbies #hob-list {
     margin-top: 1em;
     text-align-last: justify; }
+
+.skills-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-column-gap: 0.7em;
+  grid-row-gap: 0.5em;
+  margin-top: 1em; }
+  .skills-list .skill-name {
+    justify-self: end; }
+  .skills-list .fa {
+    font-size: 0.7em;
+    color: #434343; }
+
+#links-list {
+  margin-top: 1em;
+  grid-row-gap: 0.5em; }
 
 /*# sourceMappingURL=style.css.map */
