@@ -1,6 +1,4 @@
 
-$debug-border: 1px dotted gray;
-
 // Colors
 $c-darkest: #000;
 $c-dark: #353535;
@@ -28,19 +26,19 @@ html {
 body {
   background-color: #ddd;
   font: 400 1rem 'Montserrat', sans-serif;
+  height: 100vh;
   margin: 0;
   padding: 0;
 }
 
 div {
   box-sizing: border-box;
-  display: block;
 }
 
 p {
   text-align: justify;
   margin: 0;
-  line-height: 1.5em;
+  line-height: 1.6em;
 }
 
 a {
@@ -53,10 +51,6 @@ a {
   }
 }
 
-.withBorder {
-  border: $debug-border;
-}
-
 .fa {
   justify-self: center;
 }
@@ -64,34 +58,31 @@ a {
 #page {
   width: 65em;
   height: 100%;
-  min-height: 91.93em;
   background-color: white;
   margin: 0 auto;
-  display: block;
+  display: grid;
 }
 
 #content {
-  background-color: white;
-  margin: 0 4em;
   display: grid;
+  background-color: white;
+  border: 4em solid white;
   grid-column-gap: 3.5em;
-  grid-row-gap: 3em;
+  grid-row-gap: 3.5em;
   grid-template-rows: auto 1fr;
   grid-template-columns: 63% 1fr;
-  align-content: space-between;
 }
 
 #header {
-  margin-top: 3em;
   display: grid;
   grid-column-gap: inherit;
   grid-column: 1 / 3;
   grid-template-columns: inherit;
   grid-template-rows: auto auto;
+}
 
-  #title {
-    font: bold 2.5em "Merriweather", serif;
-  }
+#title {
+  font: bold 2.5em "Merriweather", serif;
 }
 
 #buttons {
@@ -133,33 +124,28 @@ a {
   font-size: 0.9em;
 }
 
-#prj {
+#prj .item-header {
 
-  .item-header {
+  grid-template-columns: auto 1fr;
+  align-items: baseline;
 
-    grid-template-columns: auto 1fr;
-    align-items: baseline;
+  .print-only {
+    display: none;
+    justify-self: end;
+    font-style: italic;
+  }
 
+  @media print {
     .print-only {
-      display: none;
-      justify-self: end;
-      font-style: italic;
-    }
-
-    @media print {
-      .print-only {
-        font-size: 0.9em;
-        display: inline;
-      }
+      font-size: 0.9em;
+      display: inline;
     }
   }
 }
 
 .main-col {
   display: grid;
-  align-items: start;
-  grid-template-rows: auto;
-  grid-row-gap: 3em;
+  grid-row-gap: 1.5em;
   align-content: space-between;
 }
 
@@ -180,7 +166,7 @@ a {
 .item-header {
   display: grid;
   align-items: end;
-  margin-top: 1em;
+  margin-top: 1.2em;
   margin-bottom: 0.5em;
 }
 
@@ -200,6 +186,10 @@ a {
   margin-bottom: 0.5em;
   font-size: 0.95em;
   color: $c-gray;
+  > .period {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
 }
 
 .role {
@@ -232,6 +222,7 @@ a {
 
   .fa {
     font-size: 0.7em;
+    margin-right: 0.4em;
     color: $c-darkgray;
   }
 }

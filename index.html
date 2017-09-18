@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width" />
     <title>Daniel de Paula's CV</title>
     <link rel='stylesheet' href='stylesheets/bootstrap.min.css'>
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:700|Montserrat:400,400i,500,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:700|Montserrat:400,400i,500,600|Lato:400,400i,500,600|Open+Sans:400,400i,500,600" rel="stylesheet">
     <link rel='stylesheet' href='font-awesome/css/font-awesome.min.css'>
     <link rel='stylesheet' href='stylesheets/style.css'>
+    <script type="text/javascript" src="include/vue.min.js"></script>
+    <script type="text/javascript" src="data/contents.js"></script>
     <script type="text/javascript">
         function doPrint(){
             window.print();
@@ -59,69 +61,17 @@
             <div id="jobs">
                 <span class="sec-title">Experience</span>
 
-                <div class="item">
+                <div class="item" v-for="exp in experiences">
                     <div class="item-header">
                         <div>
-                            <span class="item-title"><b>École Polytechnique</b></span>
-                            <span class="loc">| Palaiseau | France</span>
+                            <span class="item-title"><b>{{ exp.institution }}</b></span>
+                            <span class="loc">| {{ exp.city }} | {{ exp.country }}</span>
                         </div>
-                        <span class="role">Big Data Engineer</span>
+                        <span class="role">{{ exp.role }}</span>
                     </div>
-                    <span class="date"><b>JUL 2016 - PRESENT</b></span>
-                    <p>
-                        As part of the Data Science Initiative, I work in a project in partnership with the French
-                        national health insurance fund (CNAMTS), being one of the main engineers implementing a big data
-                        pipeline in Spark for processing over 3TBs of raw medical data into features for ML models.
-                    </p>
-                </div>
-
-
-                <div class="item">
-                    <div class="item-header">
-                        <div>
-                            <span class="item-title"><b>Icaro Tech</b></span>
-                            <span class="loc">| Campinas, SP | Brazil</span>
-                        </div>
-                        <span class="role">R&D Engineer</span>
-                    </div>
-                    <span class="date"><b>JAN 2015 - JUN 2016</b> | 1.5 year</span>
-                    <p>
-                        At first, I worked with data analysis and visualization with R and SQL, then I started
-                        contributing to the company’s products development with code, management tasks and decision
-                        making.
-                    </p>
-                </div>
-
-
-                <div class="item">
-                    <div class="item-header">
-                        <div>
-                            <span class="item-title"><b>Icaro Tech</b></span>
-                            <span class="loc"> | Campinas, SP | Brazil</span>
-                        </div>
-                        <span class="role">Intern</span>
-                    </div>
-                    <span class="date"><b>JAN 2014 - DEC 2014</b> | 1 year</span>
-                    <p>
-                        I started as a presales intern, working with price estimation and PoCs; then I changed to R&D to
-                        focus on data analysis and visualization.
-                    </p>
-                </div>
-
-
-                <div class="item">
-                    <div class="item-header">
-                        <div>
-                            <span class="item-title"><b>Lince</b></span>
-                            <span class="loc"> | Sao Carlos, SP | Brazil</span>
-                        </div>
-                        <span class="role">Web Development Intern</span>
-                    </div>
-                    <span class="date"><b>JAN 2012 - AUG 2012</b> | 8 months</span>
-                    <p>
-                        I used Javascript, CSS and HTML to contribute to the creation of the tool WebNCL, a web player for
-                        NCL multimedia documents.
-                    </p>
+                    <span class="date"><span class="period">{{ exp.period }}</span><!--
+                 --><template v-if="exp.duration"> | {{ exp.duration }}</template></span>
+                    <p>{{ exp.description}}</p>
                 </div>
             </div>
 
@@ -129,31 +79,17 @@
 
                 <span class="sec-title">Education</span>
 
-                <div class="item">
+                <div class="item" v-for="edu in education">
                     <div class="item-header">
                         <div>
-                            <span class="item-title"><b>Univ. Federal de Sao Carlos</b></span>
-                            <span class="loc"> | Sao Carlos, SP | Brazil</span>
+                            <span class="item-title"><b>{{ edu.institution }}</b></span>
+                            <span class="loc">| {{ edu.city }} | {{ edu.country }}</span>
                         </div>
-                        <span class="role">Computer Engineering</span>
+                        <span class="role">{{ edu.role }}</span>
                     </div>
-                    <span class="date"><b>JAN 2009 - DEC 2014</b></span>
-                    <p>
-                        Final project in machine learning for telecom.
-                    </p>
-                </div>
-                <div class="item">
-                    <div class="item-header">
-                        <div>
-                            <span class="item-title"><b>University of Birmingham</b></span>
-                            <span class="loc"> | Birmingham | UK</span>
-                        </div>
-                        <span class="role">Exchange Program (CS)</span>
-                    </div>
-                    <span class="date"><b>SEP 2012 - AUG 2013</b></span>
-                    <p>
-                        One year as an exchange student with a final project in robotics.
-                    </p>
+                    <span class="date"><span class="period">{{ edu.period }}</span><!--
+                --> <template v-if="edu.duration"> | {{ edu.duration }}</template></span>
+                    <p>{{ edu.description}}</p>
                 </div>
             </div>
 
@@ -193,143 +129,25 @@
             <div id="skills">
                 <span class="sec-title">Skills</span>
                 <div class="skills-list">
-                    <span class="skill-name">Apache Spark</span>
-                    <span>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                    </span>
-
-                    <span class="skill-name">Scala</span>
-                    <span>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                    </span>
-
-                    <span class="skill-name">SQL</span>
-                    <span>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                    </span>
-
-                    <span class="skill-name">Git</span>
-                    <span>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                    </span>
-
-                    <span class="skill-name">Unix</span>
-                    <span>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                    </span>
-
-                    <span class="skill-name">Web (front-end)</span>
-                    <span>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                    </span>
-
-                    <span class="skill-name">Python</span>
-                    <span>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                    </span>
-
-                    <span class="skill-name">Java</span>
-                    <span>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                    </span>
-
-                    <span class="skill-name">Node.js</span>
-                    <span>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                    </span>
-
-                    <span class="skill-name">Mach. Learning</span>
-                    <span>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                    </span>
+                    <template v-for="skill in skills">
+                        <span class="skill-name">{{ skill.name }}</span>
+                        <span>
+                            <i v-for="n in skill.level" class="fa fa-circle"></i><!--
+                         --><i v-for="n in (8 - skill.level)" class="fa fa-circle-o"></i>
+                        </span>
+                    </template>
                 </div>
             </div>
             <div id="langs">
                 <span class="sec-title">Languages</span>
                 <div class="skills-list">
-                    <span class="skill-name">Portuguese</span>
-                    <span>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                    </span>
-
-                    <span class="skill-name">English</span>
-                    <span>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                    </span>
-
-                    <span class="skill-name">French</span>
-                    <span>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                    </span>
-
-                    <span class="skill-name">Spanish</span>
-                    <span>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle"></i>
-                    </span>
+                    <template v-for="lang in languages">
+                        <span class="skill-name">{{ lang.name }}</span>
+                        <span>
+                            <i v-for="n in lang.level" class="fa fa-circle"></i><!--
+                         --><i v-for="n in (8 - lang.level)" class="fa fa-circle-o"></i>
+                        </span>
+                    </template>
                 </div>
             </div>
             <div id="links">
@@ -388,5 +206,6 @@
 
 </div>
 
+<script type="text/javascript" src="main.js"></script>
 </body>
 </html>
