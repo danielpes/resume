@@ -133,6 +133,9 @@ a {
   margin-bottom: 0.5em;
   font-size: 0.95em;
   color: #666666; }
+  .date > .period {
+    font-weight: bold;
+    text-transform: uppercase; }
 
 .role {
   font-style: italic;
@@ -157,6 +160,7 @@ a {
     justify-self: end; }
   .skills-list .fa {
     font-size: 0.7em;
+    margin-right: 0.4em;
     color: #434343; }
 
 #links-list {
