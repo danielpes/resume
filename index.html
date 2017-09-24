@@ -59,7 +59,7 @@
 
         <div id="left-col" class="main-col">
             <div id="jobs">
-                <span class="sec-title">Experience</span><div id="app"><i v-for="item in a">{{ item }}</i></div>
+                <span class="sec-title">Experience</span>
 
                 <div class="item" v-for="exp in experiences">
                     <div class="item-header">
@@ -69,7 +69,8 @@
                         </div>
                         <span class="role">{{ exp.role }}</span>
                     </div>
-                    <span class="date"><span class="period">{{ exp.period }}</span><template v-if="exp.duration"> | {{ exp.duration }}</template></span>
+                    <span class="date"><span class="period">{{ exp.period }}</span><!--
+                 --><template v-if="exp.duration"> | {{ exp.duration }}</template></span>
                     <p>{{ exp.description}}</p>
                 </div>
             </div>
@@ -78,31 +79,17 @@
 
                 <span class="sec-title">Education</span>
 
-                <div class="item">
+                <div class="item" v-for="edu in education">
                     <div class="item-header">
                         <div>
-                            <span class="item-title"><b>Univ. Federal de Sao Carlos</b></span>
-                            <span class="loc"> | Sao Carlos, SP | Brazil</span>
+                            <span class="item-title"><b>{{ edu.institution }}</b></span>
+                            <span class="loc">| {{ edu.city }} | {{ edu.country }}</span>
                         </div>
-                        <span class="role">Computer Engineering</span>
+                        <span class="role">{{ edu.role }}</span>
                     </div>
-                    <span class="date"><b>JAN 2009 - DEC 2014</b></span>
-                    <p>
-                        Final project in machine learning for telecom.
-                    </p>
-                </div>
-                <div class="item">
-                    <div class="item-header">
-                        <div>
-                            <span class="item-title"><b>University of Birmingham</b></span>
-                            <span class="loc"> | Birmingham | UK</span>
-                        </div>
-                        <span class="role">Exchange Program (CS)</span>
-                    </div>
-                    <span class="date"><b>SEP 2012 - AUG 2013</b></span>
-                    <p>
-                        One year as an exchange student with a final project in robotics.
-                    </p>
+                    <span class="date"><span class="period">{{ edu.period }}</span><!--
+                --> <template v-if="edu.duration"> | {{ edu.duration }}</template></span>
+                    <p>{{ edu.description}}</p>
                 </div>
             </div>
 
@@ -144,7 +131,10 @@
                 <div class="skills-list">
                     <template v-for="skill in skills">
                         <span class="skill-name">{{ skill.name }}</span>
-                        <span><i v-for="n in skill.level" class="fa fa-circle"></i></span>
+                        <span>
+                            <i v-for="n in skill.level" class="fa fa-circle"></i><!--
+                         --><i v-for="n in (8 - skill.level)" class="fa fa-circle-o"></i>
+                        </span>
                     </template>
                 </div>
             </div>
@@ -153,7 +143,10 @@
                 <div class="skills-list">
                     <template v-for="lang in languages">
                         <span class="skill-name">{{ lang.name }}</span>
-                        <span><i v-for="n in lang.level" class="fa fa-circle"></i></span>
+                        <span>
+                            <i v-for="n in lang.level" class="fa fa-circle"></i><!--
+                         --><i v-for="n in (8 - lang.level)" class="fa fa-circle-o"></i>
+                        </span>
                     </template>
                 </div>
             </div>

@@ -44,6 +44,25 @@ var contents = {
         }
 
     ],
+    "education": [
+        {
+            institution: "Univ. Federal de Sao Carlos",
+            city: "Sao Carlos, SP",
+            country: "Brazil",
+            role: "Computer Engineering",
+            period: "Jan 2009 - Dec 2014",
+            description: "Final project in machine learning for telecom."
+        },
+        {
+            institution: "University of Birmingham",
+            city: "Birmingham",
+            country: "UK",
+            role: "Exchange Program (CS)",
+            period: "Sep 2012 - Aug 2013",
+            description: "One year as an exchange student with a final project in robotics."
+        }
+
+    ],
     "skills": [
         {
             "name": "Apache Spark",
