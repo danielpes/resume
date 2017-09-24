@@ -14,18 +14,6 @@
         function doPrint(){
             window.print();
         }
-
-        function toggleBorders(on){
-            var divs = document.getElementsByTagName("div");
-            for (var i = 0; i < divs.length; i++) {
-                var el = divs[i];
-                if (on) {
-                    el.className += ' withBorder';
-                } else {
-                    el.className = el.className.replace(' withBorder', '');
-                }
-            }
-        }
     </script>
 </head>
 <body>
