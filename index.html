@@ -1,59 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105990489-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments)};
+        gtag('js', new Date());
+
+        gtag('config', 'UA-105990489-2');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" />
     <title>Daniel de Paula's CV</title>
-    <link rel='stylesheet' href='stylesheets/bootstrap.min.css'>
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:700|Montserrat:400,400i,500,600|Lato:400,400i,500,600|Open+Sans:400,400i,500,600" rel="stylesheet">
-    <link rel='stylesheet' href='font-awesome/css/font-awesome.min.css'>
-    <link rel='stylesheet' href='stylesheets/style.css'>
-    <script type="text/javascript" src="include/vue.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,500,600,700|Montserrat:400,400i,600,700|Lato:400,400i,600,700|Open+Sans:400,400i,600,700">
+    <link type="text/css" rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="stylesheets/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="stylesheets/style.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="data/contents.js"></script>
-    <script type="text/javascript">
-        function doPrint(){
-            window.print();
-        }
-
-        function toggleBorders(on){
-            var divs = document.getElementsByTagName("div");
-            for (var i = 0; i < divs.length; i++) {
-                var el = divs[i];
-                if (on) {
-                    el.className += ' withBorder';
-                } else {
-                    el.className = el.className.replace(' withBorder', '');
-                }
-            }
-        }
-    </script>
+    <!--<script type="text/javascript"  src="fonts.js>"></script>--><!-- Todo: use webfontloader -->
+    <script type="text/javascript" src="include/materialize.min.js"></script>
+    <script type="text/javascript" src="include/vue.min.js"></script>
 </head>
 <body>
-<div id="page">
+<div id="page" v-bind:style="{ 'fontFamily': currentFont }">
+    <nav>
+        <div id="navbar" class="nav-wrapper grey darken-2">
+            <ul id="font-selector" class="dropdown-content gray darken-2">
+                <li v-for="font in fonts"><a v-on:click="currentFont = font" v-bind:style="{ 'font-family': font }">{{ font }}</a></li>
+            </ul>
+            <ul class="left">
+                <!--<li class="active no-link"><a><i class="fa fa-cog"></i></a></li>-->
+                <li class="dropdown-button" data-beloworigin="true" data-activates="font-selector"><a><i class="fa fa-font" style="margin-right: 1em;"></i>{{ currentFont }}<i class="fa fa-caret-down" style="margin-left: 1em;"></i></a></li>
+            </ul>
+            <ul class="right">
+                <li><a v-on:click="decreaseFont()"><i class="fa fa-search-minus"></i></a></li>
+                <li><a v-on:click="increaseFont()"><i class="fa fa-search-plus"></i></a></li>
+                <!--<li><a href="https://restpack.io/api/html2pdf/v2/convert?access_token=...&url=https://danielpes.github.io/my-cv/"><i class="fa fa-download"></i></a></li>-->
+                <li><a v-on:click="window.print()"><i class="fa fa-print"></i></a></li>
+            </ul>
+        </div>
+    </nav>
     <div id="content">
-
         <div id="header">
             <div id="title">
-                <span>Daniel de Paula</span>
+                <span>{{ info.name }}</span>
             </div>
-            <div id="buttons" style="float: right">
-                <button class="noprint btn btn-default btn-sm" onclick="doPrint()"><i class="fa fa-fw fa-print"></i></button>
-                <!--<a class="noprint btn btn-default btn-sm" href="CV_DanielDePaula.pdf" download="CV.pdf">-->
-                    <!--<i class="fa fa-fw fa-file-pdf-o" style="font-size: 10pt"></i>-->
-                <!--</a>-->
-            </div>
+            <div></div>
             <div id="about">
-                <span id="stitle">Big Data Engineer</span>
-                <span class="info">Brazilian | 26 years old | Married</span>
-                <span class="info">Availble from August 2018</span>
+                <span id="stitle">{{ info.position }}</span>
+                <span class="info">{{ info.nationality }} | {{ info.age }} years old | {{ info.status }}</span>
+                <span class="info">Available from August 2018</span>
             </div>
             <div id="contact" class="has-icons">
                 <i class="fa fa-fw fa-home" style="font-size: 1.5em"></i>
-                <span>Paris Area | France</span>
+                <span>{{ contact.city }} | {{ contact.country }}</span>
                 <i class="fa fa-fw fa-phone" style="font-size: 1.4em"></i>
-                <span>+33 6 58 61 07 68</span>
+                <span>{{ contact.phone }}</span>
                 <i class="fa fa-fw fa-envelope" style="font-size: 1.15em"></i>
-                <span>contact@danielpes.me</span>
+                <span>{{ contact.email }}</span>
             </div>
         </div>
 
@@ -102,7 +109,7 @@
                         <a target="_blank" href="https://github.com/danielpes/spark-datetime-lite">
                             <span class="item-title">
                                 <i class="fa fa-github lg"></i>
-                                <b>Spark DateTime Lite&nbsp&nbsp</b>
+                                <b>Spark DateTime Lite&nbsp;&nbsp;</b>
                             </span>
                         </a>
                         <a target="_blank" href="https://github.com/danielpes/spark-datetime-lite" class="print-only">
@@ -120,7 +127,7 @@
 
             <div id="hobbies">
                 <span class="sec-title">Hobbies</span>
-                <span id="hob-list">Cinema | Chess | Digital Games | Football (Soccer) | Table-Tennis | TV Series</span>
+                <span id="hob-list">{{ hobbies.join(" | ") }}</span>
             </div>
         </div>
 
