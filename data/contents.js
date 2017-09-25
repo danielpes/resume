@@ -1,4 +1,16 @@
 var contents = {
+    "info": {
+        name: "Daniel de Paula",
+        position: "Big Data Engineer",
+        nationality: "Brazilian",
+        status: "Married"
+    },
+    "contact": {
+        city: "Paris Area",
+        country: "France",
+        phone: "+33 6 58 61 07 68",
+        email: "contact@danielpes.me"
+    },
     "experiences": [
         {
             institution: "École Polytechnique",
@@ -122,5 +134,6 @@ var contents = {
             "name": "Spanish",
             "level": 3
         }
-    ]
+    ],
+    "hobbies": ["Cinema", "Chess", "Digital Games", "Football (Soccer)", "Table-Tennis", "TV Series"]
 };
