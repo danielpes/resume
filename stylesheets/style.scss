@@ -20,13 +20,13 @@ $c-main: #000;
 }
 
 html {
-  font-size: 12px;
+  font-size: 13px;
 }
 
 body {
   background-color: #ddd;
   font: 400 1rem 'Montserrat', sans-serif;
-  height: 100vh;
+  height: 91.92857em; // to keep the A4 ratio
   margin: 0;
   padding: 0;
 }

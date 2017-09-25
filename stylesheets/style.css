@@ -5,12 +5,12 @@
   .noprint {
     visibility: hidden; } }
 html {
-  font-size: 12px; }
+  font-size: 13px; }
 
 body {
   background-color: #ddd;
   font: 400 1rem 'Montserrat', sans-serif;
-  height: 100vh;
+  height: 91.92857em;
   margin: 0;
   padding: 0; }
 
