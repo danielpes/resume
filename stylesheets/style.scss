@@ -204,7 +204,7 @@ p {
 }
 
 #hobbies {
-  font-size: 0.95em;
+  font-size: 0.9em;
   display: grid;
 
   #hob-list {
@@ -285,7 +285,7 @@ nav {
     pointer-events: none;
   }
 
-  i, [class^="mdi-"], [class*="mdi-"], i.material-icons {
+  i, [class^="mdi-"], [class*="mdi-"] {
     height: $nav-height;
     line-height: $nav-height;
   }

@@ -148,7 +148,7 @@ p {
   justify-self: end; }
 
 #hobbies {
-  font-size: 0.95em;
+  font-size: 0.9em;
   display: grid; }
   #hobbies #hob-list {
     margin-top: 1em;
@@ -207,7 +207,7 @@ nav {
       visibility: hidden; } }
   nav .no-link {
     pointer-events: none; }
-  nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {
+  nav i, nav [class^="mdi-"], nav [class*="mdi-"] {
     height: 3em;
     line-height: 3em; }
   nav .button-collapse i {
