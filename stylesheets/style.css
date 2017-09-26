@@ -228,7 +228,7 @@ nav {
       color: #434343;
       padding: 15px 15px; }
   nav .dropdown-button {
-    min-width: 9em; }
+    min-width: 10.5em; }
   @media only screen and (min-width: 601px) {
     nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
       height: 45px;
