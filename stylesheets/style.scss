@@ -72,10 +72,15 @@ p {
   display: grid;
   background-color: white;
   border: 4em solid white;
+  border-top: 2.5em solid white; // set smaller top border to compensate for top bar
   grid-column-gap: 3.5em;
   grid-row-gap: 3.5em;
   grid-template-rows: auto 1fr;
   grid-template-columns: 63% 1fr;
+
+  @media print {
+    border-top: 4em solid white; // reset top border
+  }
 }
 
 #header {
@@ -271,7 +276,7 @@ p.quote {
 
 // Materialize overrides
 
-$nav-height: 3em;
+$nav-height: 45px;
 nav {
   height: $nav-height;
   line-height: $nav-height;
@@ -285,7 +290,7 @@ nav {
     pointer-events: none;
   }
 
-  i, [class^="mdi-"], [class*="mdi-"] {
+  i, li, a, [class^="mdi-"], [class*="mdi-"] {
     height: $nav-height;
     line-height: $nav-height;
   }
@@ -296,16 +301,20 @@ nav {
   }
 
   .dropdown-content > li {
-    min-height: 40px;
+    height: $nav-height;
+    min-height: $nav-height;
+    line-height: $nav-height;
     > a {
+      font-size: $nav-height/3;
+      height: $nav-height;
+      line-height: $nav-height/3;
       color: $c-darkgray;
-      font-size: 1em;
-      padding: 9px 16px;
+      padding: $nav-height/3 $nav-height/3;
     }
   }
 
   .dropdown-button {
-    min-width: 130px;
+    min-width: 9em;
   }
 
   @media only screen and (min-width: 601px){

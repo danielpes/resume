@@ -31,8 +31,8 @@
                 <li v-for="font in fonts"><a v-on:click="currentFont = font" v-bind:style="{ 'font-family': font }">{{ font }}</a></li>
             </ul>
             <ul class="left">
-                <li class="active no-link"><a><i class="fa fa-cog"></i></a></li>
-                <li class="dropdown-button" data-beloworigin="true" data-activates="font-selector"><a>Font: {{ currentFont }}<i class="fa fa-caret-down right"></i></a></li>
+                <!--<li class="active no-link"><a><i class="fa fa-cog"></i></a></li>-->
+                <li class="dropdown-button" data-beloworigin="true" data-activates="font-selector"><a><i class="fa fa-font" style="margin-right: 1em;"></i>{{ currentFont }}<i class="fa fa-caret-down" style="margin-left: 1em;"></i></a></li>
             </ul>
             <ul class="right">
                 <li><a v-on:click="decreaseFont()"><i class="fa fa-search-minus"></i></a></li>
@@ -108,7 +108,7 @@
                         <a target="_blank" href="https://github.com/danielpes/spark-datetime-lite">
                             <span class="item-title">
                                 <i class="fa fa-github lg"></i>
-                                <b>Spark DateTime Lite&nbsp&nbsp</b>
+                                <b>Spark DateTime Lite&nbsp;&nbsp;</b>
                             </span>
                         </a>
                         <a target="_blank" href="https://github.com/danielpes/spark-datetime-lite" class="print-only">
