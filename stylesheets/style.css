@@ -10,10 +10,11 @@
     visibility: hidden; } }
 html {
   font-size: 13px;
-  background: #ddd linear-gradient(120deg, #fefefe, #dedede) no-repeat fixed bottom;
+  background: #ddd linear-gradient(120deg, #f5f5f5, #e0e0e0) no-repeat fixed bottom;
   background-size: cover; }
 
 body {
+  color: #616161;
   font: 400 1rem sans-serif;
   margin: 0;
   padding: 0; }
@@ -27,10 +28,10 @@ p {
   line-height: 1.6em; }
 
 #content a {
-  color: #000;
+  color: #616161;
   text-decoration: none; }
   #content a:link, #content a:hover, #content a:visited, #content a:active {
-    color: #000;
+    color: #616161;
     text-decoration: none; }
 
 .fa {
@@ -76,7 +77,7 @@ p {
   #about #stitle {
     font-size: 1.4em; }
   #about .info {
-    color: #434343; }
+    color: #616161; }
 
 #contact, #links-list {
   display: grid;
@@ -141,7 +142,7 @@ p {
 .date {
   margin-bottom: 0.5em;
   font-size: 0.95em;
-  color: #666666; }
+  color: #616161; }
   .date > .period {
     font-weight: bold;
     text-transform: uppercase; }
@@ -170,7 +171,7 @@ p {
   .skills-list .fa {
     font-size: 0.7em;
     margin-right: 0.4em;
-    color: #434343; }
+    color: #616161; }
 
 #links-list {
   margin-top: 1em;
@@ -186,8 +187,8 @@ p {
 p.quote {
   margin-left: 2em;
   padding-left: 0.7em;
-  border-left: 3px solid #b7b7b7;
-  color: #666666;
+  border-left: 3px solid #bdbdbd;
+  color: #616161;
   font-style: italic; }
 
 #rec-content {
@@ -225,7 +226,7 @@ nav {
       font-size: 15px;
       height: 45px;
       line-height: 15px;
-      color: #434343;
+      color: #616161;
       padding: 15px 15px; }
   nav .dropdown-button {
     min-width: 10.5em; }
