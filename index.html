@@ -30,11 +30,11 @@
             <ul id="font-selector" class="dropdown-content gray darken-2">
                 <li v-for="font in fonts"><a v-on:click="currentFont = font" v-bind:style="{ 'font-family': font }">{{ font }}</a></li>
             </ul>
-            <ul class="left hide-on-med-and-down">
+            <ul class="left">
                 <li class="active no-link"><a><i class="fa fa-cog"></i></a></li>
                 <li class="dropdown-button" data-beloworigin="true" data-activates="font-selector"><a>Font: {{ currentFont }}<i class="fa fa-caret-down right"></i></a></li>
             </ul>
-            <ul class="right hide-on-med-and-down">
+            <ul class="right">
                 <li><a v-on:click="decreaseFont()"><i class="fa fa-search-minus"></i></a></li>
                 <li><a v-on:click="increaseFont()"><i class="fa fa-search-plus"></i></a></li>
                 <!--<li><a href="https://restpack.io/api/html2pdf/v2/convert?access_token=bluRctzAcVFvNefUcmikhmOoO1hskwEo5KCCjio4vPIr3FpK&url=https://danielpes.github.io/my-cv/"><i class="fa fa-download"></i></a></li>-->
