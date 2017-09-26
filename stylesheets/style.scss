@@ -14,6 +14,10 @@ $c-main: #000;
 }
 
 @media print {
+  body {
+    width: 65em;
+    height: 91.92857em;
+  }
   .noprint {
     visibility: hidden;
   }
@@ -21,12 +25,12 @@ $c-main: #000;
 
 html {
   font-size: 13px;
+  background: #ddd linear-gradient(120deg, #fefefe, #dedede) no-repeat fixed bottom;
+  background-size: cover;
 }
 
 body {
-  background-color: #ddd;
-  font: 400 1rem 'Montserrat', sans-serif;
-  height: 91.92857em; // to keep the A4 ratio
+  font: 400 1rem sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -41,7 +45,7 @@ p {
   line-height: 1.6em;
 }
 
-a {
+#content a {
   color: $c-main;
   text-decoration: none;
 
@@ -61,6 +65,7 @@ a {
   background-color: white;
   margin: 0 auto;
   display: grid;
+  box-shadow: 2px 2px 5px 1px #ccc;
 }
 
 #content {
@@ -262,4 +267,51 @@ p.quote {
   justify-self: end;
   text-align: right;
   display: block;
+}
+
+// Materialize overrides
+
+$nav-height: 3em;
+nav {
+  height: $nav-height;
+  line-height: $nav-height;
+
+  @media print {
+    display: none;
+    visibility: hidden;
+  }
+
+  .no-link {
+    pointer-events: none;
+  }
+
+  i, [class^="mdi-"], [class*="mdi-"], i.material-icons {
+    height: $nav-height;
+    line-height: $nav-height;
+  }
+
+  .button-collapse i {
+    height: $nav-height;
+    line-height: $nav-height;
+  }
+
+  .dropdown-content > li {
+    min-height: 40px;
+    > a {
+      color: $c-darkgray;
+      font-size: 1em;
+      padding: 9px 16px;
+    }
+  }
+
+  .dropdown-button {
+    min-width: 130px;
+  }
+
+  @media only screen and (min-width: 601px){
+    .nav-wrapper i, a.button-collapse, a.button-collapse i {
+      height: $nav-height;
+      line-height: $nav-height;
+    }
+  }
 }

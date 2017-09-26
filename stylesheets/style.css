@@ -2,15 +2,19 @@
   size: A4;
   margin: 0; }
 @media print {
+  body {
+    width: 65em;
+    height: 91.92857em; }
+
   .noprint {
     visibility: hidden; } }
 html {
-  font-size: 13px; }
+  font-size: 13px;
+  background: #ddd linear-gradient(120deg, #fefefe, #dedede) no-repeat fixed bottom;
+  background-size: cover; }
 
 body {
-  background-color: #ddd;
-  font: 400 1rem 'Montserrat', sans-serif;
-  height: 91.92857em;
+  font: 400 1rem sans-serif;
   margin: 0;
   padding: 0; }
 
@@ -22,10 +26,10 @@ p {
   margin: 0;
   line-height: 1.6em; }
 
-a {
+#content a {
   color: #000;
   text-decoration: none; }
-  a:link, a:hover, a:visited, a:active {
+  #content a:link, #content a:hover, #content a:visited, #content a:active {
     color: #000;
     text-decoration: none; }
 
@@ -37,7 +41,8 @@ a {
   height: 100%;
   background-color: white;
   margin: 0 auto;
-  display: grid; }
+  display: grid;
+  box-shadow: 2px 2px 5px 1px #ccc; }
 
 #content {
   display: grid;
@@ -192,5 +197,33 @@ p.quote {
   justify-self: end;
   text-align: right;
   display: block; }
+
+nav {
+  height: 3em;
+  line-height: 3em; }
+  @media print {
+    nav {
+      display: none;
+      visibility: hidden; } }
+  nav .no-link {
+    pointer-events: none; }
+  nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {
+    height: 3em;
+    line-height: 3em; }
+  nav .button-collapse i {
+    height: 3em;
+    line-height: 3em; }
+  nav .dropdown-content > li {
+    min-height: 40px; }
+    nav .dropdown-content > li > a {
+      color: #434343;
+      font-size: 1em;
+      padding: 9px 16px; }
+  nav .dropdown-button {
+    min-width: 130px; }
+  @media only screen and (min-width: 601px) {
+    nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+      height: 3em;
+      line-height: 3em; } }
 
 /*# sourceMappingURL=style.css.map */
