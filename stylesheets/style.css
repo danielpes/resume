@@ -4,7 +4,8 @@
 @media print {
   body {
     width: 65em;
-    height: 91.92857em; }
+    height: 91.92857em;
+    -webkit-print-color-adjust: exact; }
 
   .noprint {
     visibility: hidden; } }
@@ -14,7 +15,7 @@ html {
   background-size: cover; }
 
 body {
-  color: #616161;
+  color: #424242;
   font: 400 1rem sans-serif;
   margin: 0;
   padding: 0; }
@@ -28,10 +29,10 @@ p {
   line-height: 1.6em; }
 
 #content a {
-  color: #616161;
+  color: #424242;
   text-decoration: none; }
   #content a:link, #content a:hover, #content a:visited, #content a:active {
-    color: #616161;
+    color: #424242;
     text-decoration: none; }
 
 .fa {
@@ -142,9 +143,9 @@ p {
 .date {
   margin-bottom: 0.5em;
   font-size: 0.95em;
-  color: #616161; }
+  color: #757575; }
   .date > .period {
-    font-weight: bold;
+    font-weight: 600;
     text-transform: uppercase; }
 
 .role {
@@ -182,13 +183,13 @@ p {
   display: grid;
   grid-row-gap: 1em; }
   #acc-content b {
-    font-weight: 500; }
+    font-weight: 600; }
 
 p.quote {
   margin-left: 2em;
   padding-left: 0.7em;
   border-left: 3px solid #bdbdbd;
-  color: #616161;
+  color: #757575;
   font-style: italic; }
 
 #rec-content {

@@ -10,7 +10,7 @@ $grey7: #e0e0e0;
 $grey8: #f5f5f5;
 
 $c-section: #2079c7;
-$c-main: $grey3;
+$c-main: $grey2;
 
 @page {
   size: A4;
@@ -21,6 +21,7 @@ $c-main: $grey3;
   body {
     width: 65em;
     height: 91.92857em;
+    -webkit-print-color-adjust: exact;
   }
   .noprint {
     visibility: hidden;
@@ -200,9 +201,9 @@ p {
 .date {
   margin-bottom: 0.5em;
   font-size: 0.95em;
-  color: $grey3;
+  color: $grey4;
   > .period {
-    font-weight: bold;
+    font-weight: 600;
     text-transform: uppercase;
   }
 }
@@ -253,7 +254,7 @@ p {
   grid-row-gap: 1em;
 
   b {
-    font-weight: 500;
+    font-weight: 600;
   }
 }
 
@@ -261,7 +262,7 @@ p.quote {
   margin-left: 2em;
   padding-left: 0.7em;
   border-left: 3px solid $grey6;
-  color: $grey3;
+  color: $grey4;
   font-style: italic;
 }
 
