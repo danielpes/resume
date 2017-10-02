@@ -166,12 +166,16 @@ p {
 .skills-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
   grid-column-gap: 0.7em;
   grid-row-gap: 0.5em;
-  margin-top: 1em; }
+  margin-top: 1em;
+  align-items: center; }
   .skills-list .skill-name {
     justify-self: end; }
+  .skills-list .skill-bar {
+    justify-self: stretch;
+    height: 0.7em;
+    background-color: white; }
   .skills-list .fa {
     font-size: 0.7em;
     margin-right: 0.4em;

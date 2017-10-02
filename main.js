@@ -26,6 +26,14 @@ var app = new Vue({
         decreaseFont: function () {
             this.baseFontSize--;
             $("html").css("font-size", this.baseFontSize);
+        },
+        updateSkillBar: function(level) {
+            console.log(level);
+            return {
+                'border': '1px solid #757575',
+                'padding-left': 'calc('+10*level+'%-1px)',
+                'background-color': '#757575'
+            }
         }
     }
 });

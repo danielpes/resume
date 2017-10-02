@@ -22,24 +22,24 @@
     <script type="text/javascript" src="data/contents.js"></script>
     <!--<script type="text/javascript"  src="fonts.js>"></script>--><!-- Todo: use webfontloader -->
     <script type="text/javascript" src="include/materialize.min.js"></script>
-    <script type="text/javascript" src="include/vue.min.js"></script>
+    <script type="text/javascript" src="include/vue.js"></script>
 </head>
 <body>
-<div id="page" v-bind:style="{ 'fontFamily': currentFont }" v-cloak>
+<div id="page" :style="{ 'fontFamily': currentFont }" v-cloak>
     <nav>
         <div id="navbar" class="nav-wrapper grey darken-2">
             <ul id="font-selector" class="dropdown-content gray darken-2">
-                <li v-for="font in fonts"><a v-on:click="currentFont = font" :style="{ 'font-family': font }">{{ font }}</a></li>
+                <li v-for="font in fonts"><a @click="currentFont = font" :style="{ 'font-family': font }">{{ font }}</a></li>
             </ul>
             <ul class="left">
                 <!--<li class="active no-link"><a><i class="fa fa-cog"></i></a></li>-->
                 <li class="dropdown-button" data-beloworigin="true" data-activates="font-selector"><a><i class="fa fa-font" style="margin-right: 1em;"></i>{{ currentFont }}<i class="fa fa-caret-down" style="margin-left: 1em;"></i></a></li>
             </ul>
             <ul class="right">
-                <li><a v-on:click="decreaseFont()"><i class="fa fa-search-minus"></i></a></li>
-                <li><a v-on:click="increaseFont()"><i class="fa fa-search-plus"></i></a></li>
+                <li><a @click="decreaseFont()"><i class="fa fa-search-minus"></i></a></li>
+                <li><a @click="increaseFont()"><i class="fa fa-search-plus"></i></a></li>
                 <!--<li><a href="https://restpack.io/api/html2pdf/v2/convert?access_token=...&url=https://danielpes.github.io/my-cv/"><i class="fa fa-download"></i></a></li>-->
-                <li><a v-on:click="window.print()"><i class="fa fa-print"></i></a></li>
+                <li><a click="window.print()"><i class="fa fa-print"></i></a></li>
             </ul>
         </div>
     </nav>
@@ -138,10 +138,7 @@
                 <div class="skills-list">
                     <template v-for="skill in skills">
                         <span class="skill-name">{{ skill.name }}</span>
-                        <span>
-                            <i v-for="n in skill.level" class="fa fa-circle"></i><!--
-                         --><i v-for="n in (8 - skill.level)" class="fa fa-circle-o"></i>
-                        </span>
+                        <div class="skill-bar" :style="updateSkillBar(skill.level)"></div>
                     </template>
                 </div>
             </div>
@@ -150,10 +147,9 @@
                 <div class="skills-list">
                     <template v-for="lang in languages">
                         <span class="skill-name">{{ lang.name }}</span>
-                        <span>
-                            <i v-for="n in lang.level" class="fa fa-circle"></i><!--
-                         --><i v-for="n in (8 - lang.level)" class="fa fa-circle-o"></i>
-                        </span>
+                        <div :style="updateSkillBar(lang.level)">
+                            <div class="skill-bar"></div>
+                        </div>
                     </template>
                 </div>
             </div>
