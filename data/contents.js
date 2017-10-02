@@ -8,8 +8,11 @@ var contents = {
     "contact": {
         city: "Paris Area",
         country: "France",
-        phone: "+33 6 58 61 07 68",
-        email: "contact@danielpes.me"
+        ph: ["+33", "6", "58", "61", "07", "68"],
+        em: {
+            l: "contact",
+            r: "danielpes.me"
+        }
     },
     "experiences": [
         {
@@ -78,39 +81,39 @@ var contents = {
     "skills": [
         {
             "name": "Apache Spark",
-            "level": 8
+            "level": 10
         },
         {
             "name": "Scala",
-            "level": 7
+            "level": 9
         },
         {
             "name": "SQL",
-            "level": 7
+            "level": 8
         },
         {
             "name": "Git",
-            "level": 6
+            "level": 8
         },
         {
             "name": "Unix",
-            "level": 5
+            "level": 7
         },
         {
             "name": "Web (front-end)",
-            "level": 5
+            "level": 7
         },
         {
             "name": "Python",
-            "level": 4
+            "level": 6
         },
         {
             "name": "Java",
-            "level": 4
+            "level": 6
         },
         {
             "name": "Node.js",
-            "level": 4
+            "level": 5
         },
         {
             "name": "Mach. Learning",
@@ -120,19 +123,19 @@ var contents = {
     "languages": [
         {
             "name": "Portuguese",
-            "level": 8
+            "level": 10
         },
         {
             "name": "English",
-            "level": 7
+            "level": 9
         },
         {
             "name": "French",
-            "level": 6
+            "level": 8
         },
         {
             "name": "Spanish",
-            "level": 3
+            "level": 4
         }
     ],
     "hobbies": ["Cinema", "Chess", "Digital Games", "Football (Soccer)", "Table-Tennis", "TV Series"]

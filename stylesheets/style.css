@@ -5,7 +5,9 @@
   body {
     width: 65em;
     height: 91.92857em;
-    -webkit-print-color-adjust: exact; }
+    -webkit-print-color-adjust: exact;
+    -webkit-transform: none;
+    transform: none; }
 
   .noprint {
     visibility: hidden; } }
@@ -15,6 +17,7 @@ html {
   background-size: cover; }
 
 body {
+  transform-origin: 50% 0;
   color: #424242;
   font: 400 1rem sans-serif;
   margin: 0;
@@ -27,6 +30,9 @@ p {
   text-align: justify;
   margin: 0;
   line-height: 1.6em; }
+
+b {
+  font-weight: bolder; }
 
 #content a {
   color: #424242;
@@ -46,10 +52,13 @@ p {
   display: grid;
   box-shadow: 2px 2px 5px 1px #ccc; }
 
+[v-cloak] {
+  visibility: hidden; }
+
 #content {
   display: grid;
   background-color: white;
-  border: 4em solid white;
+  border: 4rem solid white;
   border-top: 2.5em solid white;
   grid-column-gap: 3.5em;
   grid-row-gap: 3.5em;
@@ -117,9 +126,10 @@ p {
 
 .sec-title {
   color: #2079c7;
-  font-weight: 600;
+  font-weight: bolder;
   font-size: 1.2rem;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  letter-spacing: 0.05rem; }
 
 .item {
   display: grid;
@@ -145,7 +155,7 @@ p {
   font-size: 0.95em;
   color: #757575; }
   .date > .period {
-    font-weight: 600;
+    font-weight: bolder;
     text-transform: uppercase; }
 
 .role {
@@ -163,12 +173,21 @@ p {
 .skills-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
   grid-column-gap: 0.7em;
   grid-row-gap: 0.5em;
-  margin-top: 1em; }
+  margin-top: 1em;
+  align-items: baseline; }
   .skills-list .skill-name {
     justify-self: end; }
+  .skills-list .skill-bar-outer {
+    border: 1px solid #757575;
+    justify-self: stretch;
+    height: 7px;
+    background-color: white; }
+  .skills-list .skill-bar-inner {
+    border: 1px solid #757575;
+    height: 100%;
+    background-color: #757575; }
   .skills-list .fa {
     font-size: 0.7em;
     margin-right: 0.4em;
@@ -183,7 +202,7 @@ p {
   display: grid;
   grid-row-gap: 1em; }
   #acc-content b {
-    font-weight: 600; }
+    font-weight: bolder; }
 
 p.quote {
   margin-left: 2em;

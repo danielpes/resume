@@ -14,7 +14,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" />
     <title>Daniel de Paula's CV</title>
-    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,500,600,700|Montserrat:400,400i,600,700|Lato:400,400i,600,700|Open+Sans:400,400i,600,700">
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,600,700|Montserrat:400,400i,600|Lato:400,400i,900|Open+Sans:400,400i,600,700">
     <link type="text/css" rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <link type="text/css" rel="stylesheet" href="stylesheets/materialize.min.css"  media="screen,projection"/>
     <link type="text/css" rel="stylesheet" href="stylesheets/style.css">
@@ -25,21 +25,21 @@
     <script type="text/javascript" src="include/vue.min.js"></script>
 </head>
 <body>
-<div id="page" v-bind:style="{ 'fontFamily': currentFont }">
+<div id="page" :style="{ 'fontFamily': currentFont }" v-cloak>
     <nav>
         <div id="navbar" class="nav-wrapper grey darken-2">
             <ul id="font-selector" class="dropdown-content gray darken-2">
-                <li v-for="font in fonts"><a v-on:click="currentFont = font" v-bind:style="{ 'font-family': font }">{{ font }}</a></li>
+                <li v-for="font in fonts"><a @click="currentFont = font" :style="{ 'font-family': font }">{{ font }}</a></li>
             </ul>
             <ul class="left">
                 <!--<li class="active no-link"><a><i class="fa fa-cog"></i></a></li>-->
                 <li class="dropdown-button" data-beloworigin="true" data-activates="font-selector"><a><i class="fa fa-font" style="margin-right: 1em;"></i>{{ currentFont }}<i class="fa fa-caret-down" style="margin-left: 1em;"></i></a></li>
             </ul>
             <ul class="right">
-                <li><a v-on:click="decreaseFont()"><i class="fa fa-search-minus"></i></a></li>
-                <li><a v-on:click="increaseFont()"><i class="fa fa-search-plus"></i></a></li>
+                <!--<li><a @click="zoomOut()"><i class="fa fa-search-minus"></i></a></li>-->
+                <!--<li><a @click="zoomIn()"><i class="fa fa-search-plus"></i></a></li>-->
                 <!--<li><a href="https://restpack.io/api/html2pdf/v2/convert?access_token=...&url=https://danielpes.github.io/my-cv/"><i class="fa fa-download"></i></a></li>-->
-                <li><a v-on:click="window.print()"><i class="fa fa-print"></i></a></li>
+                <li><a @click="window.print()"><i class="fa fa-print"></i></a></li>
             </ul>
         </div>
     </nav>
@@ -58,9 +58,9 @@
                 <i class="fa fa-fw fa-home" style="font-size: 1.5em"></i>
                 <span>{{ contact.city }} | {{ contact.country }}</span>
                 <i class="fa fa-fw fa-phone" style="font-size: 1.4em"></i>
-                <span>{{ contact.phone }}</span>
+                <span>{{ getPhoneNumber() }}</span>
                 <i class="fa fa-fw fa-envelope" style="font-size: 1.15em"></i>
-                <span>{{ contact.email }}</span>
+                <a :href="'mailto:' + getEmail()" target="_blank">{{ getEmail() }}</a>
             </div>
         </div>
 
@@ -138,10 +138,9 @@
                 <div class="skills-list">
                     <template v-for="skill in skills">
                         <span class="skill-name">{{ skill.name }}</span>
-                        <span>
-                            <i v-for="n in skill.level" class="fa fa-circle"></i><!--
-                         --><i v-for="n in (8 - skill.level)" class="fa fa-circle-o"></i>
-                        </span>
+                        <div class="skill-bar-outer">
+                            <div class="skill-bar-inner" :style="updateSkillBar(skill.level)"></div>
+                        </div>
                     </template>
                 </div>
             </div>
@@ -150,10 +149,9 @@
                 <div class="skills-list">
                     <template v-for="lang in languages">
                         <span class="skill-name">{{ lang.name }}</span>
-                        <span>
-                            <i v-for="n in lang.level" class="fa fa-circle"></i><!--
-                         --><i v-for="n in (8 - lang.level)" class="fa fa-circle-o"></i>
-                        </span>
+                        <div class="skill-bar-outer">
+                            <div class="skill-bar-inner" :style="updateSkillBar(lang.level)"></div>
+                        </div>
                     </template>
                 </div>
             </div>
