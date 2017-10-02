@@ -8,8 +8,11 @@ var contents = {
     "contact": {
         city: "Paris Area",
         country: "France",
-        phone: "+33 6 58 61 07 68",
-        email: "contact@danielpes.me"
+        ph: ["+33", "6", "58", "61", "07", "68"],
+        em: {
+            l: "contact",
+            r: "danielpes.me"
+        }
     },
     "experiences": [
         {

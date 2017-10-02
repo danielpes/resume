@@ -46,10 +46,13 @@ p {
   display: grid;
   box-shadow: 2px 2px 5px 1px #ccc; }
 
+[v-cloak] {
+  visibility: hidden; }
+
 #content {
   display: grid;
   background-color: white;
-  border: 4em solid white;
+  border: 4rem solid white;
   border-top: 2.5em solid white;
   grid-column-gap: 3.5em;
   grid-row-gap: 3.5em;

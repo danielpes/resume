@@ -25,11 +25,11 @@
     <script type="text/javascript" src="include/vue.min.js"></script>
 </head>
 <body>
-<div id="page" v-bind:style="{ 'fontFamily': currentFont }">
+<div id="page" v-bind:style="{ 'fontFamily': currentFont }" v-cloak>
     <nav>
         <div id="navbar" class="nav-wrapper grey darken-2">
             <ul id="font-selector" class="dropdown-content gray darken-2">
-                <li v-for="font in fonts"><a v-on:click="currentFont = font" v-bind:style="{ 'font-family': font }">{{ font }}</a></li>
+                <li v-for="font in fonts"><a v-on:click="currentFont = font" :style="{ 'font-family': font }">{{ font }}</a></li>
             </ul>
             <ul class="left">
                 <!--<li class="active no-link"><a><i class="fa fa-cog"></i></a></li>-->
@@ -58,9 +58,9 @@
                 <i class="fa fa-fw fa-home" style="font-size: 1.5em"></i>
                 <span>{{ contact.city }} | {{ contact.country }}</span>
                 <i class="fa fa-fw fa-phone" style="font-size: 1.4em"></i>
-                <span>{{ contact.phone }}</span>
+                <span>{{ getPhoneNumber() }}</span>
                 <i class="fa fa-fw fa-envelope" style="font-size: 1.15em"></i>
-                <span>{{ contact.email }}</span>
+                <a :href="'mailto:' + getEmail()" target="_blank">{{ getEmail() }}</a>
             </div>
         </div>
 

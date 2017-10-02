@@ -13,13 +13,19 @@ var app = new Vue({
     data: data,
     methods: {
         print: window.print,
+        getPhoneNumber: function() {
+            return this.contact.ph.join(" ");
+        },
+        getEmail: function() {
+            return this.contact.em.l + "@" + this.contact.em.r;
+        },
         increaseFont: function () {
             this.baseFontSize++;
-            $("html").css("font-size", this.baseFontSize)
+            $("html").css("font-size", this.baseFontSize);
         },
         decreaseFont: function () {
             this.baseFontSize--;
-            $("html").css("font-size", this.baseFontSize)
+            $("html").css("font-size", this.baseFontSize);
         }
     }
 });
