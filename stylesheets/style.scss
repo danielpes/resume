@@ -22,6 +22,8 @@ $c-main: $grey2;
     width: 65em;
     height: 91.92857em;
     -webkit-print-color-adjust: exact;
+    -webkit-transform: none;
+    transform: none;
   }
   .noprint {
     visibility: hidden;
@@ -35,10 +37,13 @@ html {
 }
 
 body {
+  transform-origin: 50% 0;
   color: $c-main;
   font: 400 1rem sans-serif;
   margin: 0;
   padding: 0;
+  @media print {
+  }
 }
 
 div {
@@ -49,6 +54,10 @@ p {
   text-align: justify;
   margin: 0;
   line-height: 1.6em;
+}
+
+b {
+  font-weight: bolder;
 }
 
 #content a {
@@ -171,9 +180,10 @@ p {
 
 .sec-title {
   color: $c-section;
-  font-weight: 600;
+  font-weight: bolder;
   font-size: 1.2rem;
   text-transform: uppercase;
+  letter-spacing: 0.05rem;
 }
 
 .item {
@@ -207,7 +217,7 @@ p {
   font-size: 0.95em;
   color: $grey4;
   > .period {
-    font-weight: 600;
+    font-weight: bolder;
     text-transform: uppercase;
   }
 }
@@ -234,16 +244,23 @@ p {
   grid-column-gap: 0.7em;
   grid-row-gap: 0.5em;
   margin-top: 1em;
-  align-items: center;
+  align-items: baseline;
 
   .skill-name {
     justify-self: end;
   }
 
-  .skill-bar {
+  .skill-bar-outer {
+    border: 1px solid $grey4;
     justify-self: stretch;
-    height: 0.7em;
+    height: 7px;
     background-color: white;
+  }
+
+  .skill-bar-inner {
+    border: 1px solid $grey4;
+    height: 100%;
+    background-color: $grey4;
   }
 
   .fa {
@@ -265,7 +282,7 @@ p {
   grid-row-gap: 1em;
 
   b {
-    font-weight: 600;
+    font-weight: bolder;
   }
 }
 

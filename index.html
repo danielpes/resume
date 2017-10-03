@@ -14,7 +14,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" />
     <title>Daniel de Paula's CV</title>
-    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,500,600,700|Montserrat:400,400i,600,700|Lato:400,400i,600,700|Open+Sans:400,400i,600,700">
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,600,700|Montserrat:400,400i,600|Lato:400,400i,900|Open+Sans:400,400i,600,700">
     <link type="text/css" rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <link type="text/css" rel="stylesheet" href="stylesheets/materialize.min.css"  media="screen,projection"/>
     <link type="text/css" rel="stylesheet" href="stylesheets/style.css">
@@ -22,7 +22,7 @@
     <script type="text/javascript" src="data/contents.js"></script>
     <!--<script type="text/javascript"  src="fonts.js>"></script>--><!-- Todo: use webfontloader -->
     <script type="text/javascript" src="include/materialize.min.js"></script>
-    <script type="text/javascript" src="include/vue.js"></script>
+    <script type="text/javascript" src="include/vue.min.js"></script>
 </head>
 <body>
 <div id="page" :style="{ 'fontFamily': currentFont }" v-cloak>
@@ -36,10 +36,10 @@
                 <li class="dropdown-button" data-beloworigin="true" data-activates="font-selector"><a><i class="fa fa-font" style="margin-right: 1em;"></i>{{ currentFont }}<i class="fa fa-caret-down" style="margin-left: 1em;"></i></a></li>
             </ul>
             <ul class="right">
-                <li><a @click="decreaseFont()"><i class="fa fa-search-minus"></i></a></li>
-                <li><a @click="increaseFont()"><i class="fa fa-search-plus"></i></a></li>
+                <!--<li><a @click="zoomOut()"><i class="fa fa-search-minus"></i></a></li>-->
+                <!--<li><a @click="zoomIn()"><i class="fa fa-search-plus"></i></a></li>-->
                 <!--<li><a href="https://restpack.io/api/html2pdf/v2/convert?access_token=...&url=https://danielpes.github.io/my-cv/"><i class="fa fa-download"></i></a></li>-->
-                <li><a click="window.print()"><i class="fa fa-print"></i></a></li>
+                <li><a @click="window.print()"><i class="fa fa-print"></i></a></li>
             </ul>
         </div>
     </nav>
@@ -138,7 +138,9 @@
                 <div class="skills-list">
                     <template v-for="skill in skills">
                         <span class="skill-name">{{ skill.name }}</span>
-                        <div class="skill-bar" :style="updateSkillBar(skill.level)"></div>
+                        <div class="skill-bar-outer">
+                            <div class="skill-bar-inner" :style="updateSkillBar(skill.level)"></div>
+                        </div>
                     </template>
                 </div>
             </div>
@@ -147,8 +149,8 @@
                 <div class="skills-list">
                     <template v-for="lang in languages">
                         <span class="skill-name">{{ lang.name }}</span>
-                        <div :style="updateSkillBar(lang.level)">
-                            <div class="skill-bar"></div>
+                        <div class="skill-bar-outer">
+                            <div class="skill-bar-inner" :style="updateSkillBar(lang.level)"></div>
                         </div>
                     </template>
                 </div>

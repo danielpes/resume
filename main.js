@@ -5,7 +5,7 @@ data.fonts = [
     "Montserrat", "Lato", "Open Sans", "Merriweather"
 ];
 data.currentFont = "Montserrat";
-data.baseFontSize = 13;
+data.currentZoom = 1;
 
 
 var app = new Vue({
@@ -19,20 +19,18 @@ var app = new Vue({
         getEmail: function() {
             return this.contact.em.l + "@" + this.contact.em.r;
         },
-        increaseFont: function () {
-            this.baseFontSize++;
-            $("html").css("font-size", this.baseFontSize);
+        zoomIn: function () {
+            this.currentZoom+=0.1;
+            $("body").css("transform", "scale(" + this.currentZoom + ")");
         },
-        decreaseFont: function () {
-            this.baseFontSize--;
-            $("html").css("font-size", this.baseFontSize);
+        zoomOut: function () {
+            this.currentZoom=1;
+            $("body").css("transform", "scale(" + this.currentZoom + ")");
         },
         updateSkillBar: function(level) {
             console.log(level);
             return {
-                'border': '1px solid #757575',
-                'padding-left': 'calc('+10*level+'%-1px)',
-                'background-color': '#757575'
+                'width': 10*level + '%'
             }
         }
     }
