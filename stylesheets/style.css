@@ -12,7 +12,7 @@
   .noprint {
     visibility: hidden; } }
 html {
-  font-size: 13px;
+  font-size: 14px;
   background: #ddd linear-gradient(120deg, #f5f5f5, #e0e0e0) no-repeat fixed bottom;
   background-size: cover; }
 
@@ -189,7 +189,7 @@ b {
     height: 100%;
     background-color: #757575; }
   .skills-list .fa {
-    font-size: 0.7em;
+    font-size: 0.8em;
     margin-right: 0.4em;
     color: #616161; }
 

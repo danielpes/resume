@@ -81,7 +81,7 @@ var contents = {
     "skills": [
         {
             "name": "Apache Spark",
-            "level": 10
+            "level": 9
         },
         {
             "name": "Scala",
@@ -135,7 +135,7 @@ var contents = {
         },
         {
             "name": "Spanish",
-            "level": 4
+            "level": 3
         }
     ],
     "hobbies": ["Cinema", "Chess", "Digital Games", "Football (Soccer)", "Table-Tennis", "TV Series"]
