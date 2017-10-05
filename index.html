@@ -7,19 +7,17 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments)};
         gtag('js', new Date());
-
         gtag('config', 'UA-105990489-2');
     </script>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width"/>
     <title>Daniel de Paula's CV</title>
-    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,600,700|Montserrat:400,400i,600|Lato:400,400i,900|Open+Sans:400,400i,600,700">
-    <link type="text/css" rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-    <link type="text/css" rel="stylesheet" href="stylesheets/materialize.min.css"  media="screen,projection"/>
-    <link type="text/css" rel="stylesheet" href="stylesheets/style.css">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <!--<script type="text/javascript"  src="fonts.js>"></script>--><!-- Todo: use webfontloader -->
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,600,700|Montserrat:400,400i,600|Lato:400,400i,900|Open+Sans:400,400i,600,700"/>
+    <link type="text/css" rel="stylesheet" href="font-awesome/css/font-awesome.min.css"/>
+    <link type="text/css" rel="stylesheet" href="stylesheets/materialize.min.css"/>
+    <link type="text/css" rel="stylesheet" href="stylesheets/style.css"/>
+    <script type="text/javascript" src="include/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="include/materialize.min.js"></script>
     <script type="text/javascript" src="include/vue.min.js"></script>
 </head>
@@ -35,9 +33,6 @@
                 <li class="dropdown-button" data-beloworigin="true" data-activates="font-selector"><a><i class="fa fa-font" style="margin-right: 1em;"></i>{{ currentFont }}<i class="fa fa-caret-down" style="margin-left: 1em;"></i></a></li>
             </ul>
             <ul class="right">
-                <!--<li><a @click="zoomOut()"><i class="fa fa-search-minus"></i></a></li>-->
-                <!--<li><a @click="zoomIn()"><i class="fa fa-search-plus"></i></a></li>-->
-                <!--<li><a href="https://restpack.io/api/html2pdf/v2/convert?access_token=...&url=https://danielpes.github.io/my-cv/"><i class="fa fa-download"></i></a></li>-->
                 <li><a @click="window.print()"><i class="fa fa-print"></i></a></li>
             </ul>
         </div>

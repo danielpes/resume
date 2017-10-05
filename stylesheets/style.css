@@ -126,6 +126,7 @@ b {
 
 .sec-title {
   color: #2079c7;
+  font-family: 'Montserrat';
   font-weight: bolder;
   font-size: 1.2rem;
   text-transform: uppercase;
@@ -152,6 +153,7 @@ b {
 
 .date {
   margin-bottom: 0.5em;
+  font-family: 'Montserrat';
   font-size: 0.95em;
   color: #757575; }
   .date > .period {
@@ -189,7 +191,7 @@ b {
     height: 100%;
     background-color: #757575; }
   .skills-list .fa {
-    font-size: 0.8em;
+    font-size: 0.7em;
     margin-right: 0.4em;
     color: #616161; }
 

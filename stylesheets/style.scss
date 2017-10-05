@@ -180,6 +180,7 @@ b {
 
 .sec-title {
   color: $c-section;
+  font-family: 'Montserrat';
   font-weight: bolder;
   font-size: 1.2rem;
   text-transform: uppercase;
@@ -214,6 +215,7 @@ b {
 
 .date {
   margin-bottom: 0.5em;
+  font-family: 'Montserrat';
   font-size: 0.95em;
   color: $grey4;
   > .period {

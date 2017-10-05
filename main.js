@@ -64,14 +64,6 @@ var app = new Vue({
         getEmail: function() {
             return this.contact.em.l + "@" + this.contact.em.r;
         },
-        zoomIn: function () {
-            this.currentZoom+=0.1;
-            $("body").css("transform", "scale(" + this.currentZoom + ")");
-        },
-        zoomOut: function () {
-            this.currentZoom=1;
-            $("body").css("transform", "scale(" + this.currentZoom + ")");
-        },
         updateSkillBar: function(level) {
             return {
                 'width': 10*level + '%'
