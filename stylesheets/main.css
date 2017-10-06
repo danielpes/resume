@@ -103,6 +103,7 @@ nav {
   grid-template-rows: auto auto; }
 
 #header-title {
+  color: #212121;
   font: bold 2.5em "Merriweather"; }
 
 #header-about {
@@ -155,6 +156,9 @@ nav {
   font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: 0.05rem; }
+  @media print {
+    .sec-title {
+      color: #212121; } }
 
 .item {
   display: grid;

@@ -46,6 +46,9 @@
   font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: 0.05rem;
+  @media print {
+    color: $title-color;
+  }
 }
 
 .item {

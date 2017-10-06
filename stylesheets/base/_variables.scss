@@ -2,13 +2,6 @@
 $page-width: 65em;
 $page-height: $page-width*1.414285714;
 
-// Typography
-$title-font-family: "Merriweather";
-$base-font-family: "Montserrat";
-$base-font-size: 14px;
-
-// Colors
-
 // Greyscale
 $black: black;
 $grey-darkest: #212121;
@@ -23,3 +16,9 @@ $white: white;
 // Main colors
 $c-section: #2079c7;
 $c-text: $grey-darker;
+
+// Typography
+$title-font-family: "Merriweather";
+$title-color: $grey-darkest;
+$base-font-family: "Montserrat";
+$base-font-size: 14px;
