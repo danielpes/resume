@@ -15,11 +15,11 @@
     <title>Daniel de Paula's CV</title>
     <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,600,700|Montserrat:400,400i,600|Lato:400,400i,900|Open+Sans:400,400i,600,700"/>
     <link type="text/css" rel="stylesheet" href="font-awesome/css/font-awesome.min.css"/>
-    <link type="text/css" rel="stylesheet" href="stylesheets/materialize.min.css"/>
-    <link type="text/css" rel="stylesheet" href="stylesheets/style.css"/>
-    <script type="text/javascript" src="include/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="include/materialize.min.js"></script>
-    <script type="text/javascript" src="include/vue.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="materialize/materialize.min.css"/>
+    <link type="text/css" rel="stylesheet" href="stylesheets/main.css"/>
+    <script type="text/javascript" src="js/include/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="materialize/materialize.min.js"></script>
+    <script type="text/javascript" src="js/include/vue.min.js"></script>
 </head>
 <body>
 <div id="page" :style="{ 'fontFamily': currentFont }" v-cloak>
@@ -29,7 +29,6 @@
                 <li v-for="font in fonts"><a @click="currentFont = font" :style="{ 'font-family': font }">{{ font }}</a></li>
             </ul>
             <ul class="left">
-                <!--<li class="active no-link"><a><i class="fa fa-cog"></i></a></li>-->
                 <li class="dropdown-button" data-beloworigin="true" data-activates="font-selector"><a><i class="fa fa-font" style="margin-right: 1em;"></i>{{ currentFont }}<i class="fa fa-caret-down" style="margin-left: 1em;"></i></a></li>
             </ul>
             <ul class="right">
@@ -37,23 +36,23 @@
             </ul>
         </div>
     </nav>
-    <div id="content">
+    <div id="main-grid">
         <div id="header">
-            <div id="title">
+            <div id="header-title">
                 <span>{{ info.name }}</span>
             </div>
-            <div></div>
-            <div id="about">
-                <span id="stitle">{{ info.position }}</span>
+            <div><!--empty div--></div>
+            <div id="header-about">
+                <span id="header-subtitle">{{ info.position }}</span>
                 <span class="info">{{ info.nationality }} | {{ getAge(info.dob) }} years old | {{ info.status }}</span>
                 <span class="info">Available from August 2018</span>
             </div>
-            <div id="contact" class="has-icons">
-                <i class="fa fa-fw fa-home" style="font-size: 1.5em"></i>
+            <div id="contact">
+                <i class="grid-icon fa fa-fw fa-home" style="font-size: 1.5em"></i>
                 <span>{{ contact.city }} | {{ contact.country }}</span>
-                <i class="fa fa-fw fa-phone" style="font-size: 1.4em"></i>
+                <i class="grid-icon fa fa-fw fa-phone" style="font-size: 1.4em"></i>
                 <span>{{ getPhoneNumber() }}</span>
-                <i class="fa fa-fw fa-envelope" style="font-size: 1.15em"></i>
+                <i class="grid-icon fa fa-fw fa-envelope" style="font-size: 1.15em"></i>
                 <a :href="'mailto:' + getEmail()" target="_blank">{{ getEmail() }}</a>
             </div>
         </div>
@@ -151,16 +150,16 @@
             </div>
             <div id="links">
                 <span class="sec-title">Online</span>
-                <div id="links-list" class="has-icons">
-                    <i class="fa fa-fw fa-linkedin-square" style="font-size: 1.4em"></i>
+                <div id="links-list">
+                    <i class="grid-icon fa fa-fw fa-linkedin-square" style="font-size: 1.4em"></i>
                     <a href="http://linkedin.com/in/danieldepaula">
                         <span>linkedin.com/in/danieldepaula</span>
                     </a>
-                    <i class="fa fa-fw fa-github" style="font-size: 1.4em"></i>
+                    <i class="grid-icon fa fa-fw fa-github" style="font-size: 1.4em"></i>
                     <a href="http://github.com/danielpes">
                         <span>github.com/danielpes</span>
                     </a>
-                    <i class="fa fa-fw fa-stack-overflow" style="font-size: 1.2em"></i>
+                    <i class="grid-icon fa fa-fw fa-stack-overflow" style="font-size: 1.2em"></i>
                     <a href="http://stackoverflow.com/users/3864822/">
                         <span>stackoverflow.com/users/3864822/</span>
                     </a>
@@ -202,9 +201,8 @@
             </div>
         </div>
     </div>
-
 </div>
 
-<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

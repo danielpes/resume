@@ -1,0 +1,172 @@
+#contact, #links-list {
+  display: grid;
+  align-content: space-between;
+  align-items: center;
+  grid-column-gap: 0.7em;
+  grid-row-gap: 0.3em;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1.1em auto;
+}
+
+#jobs {
+  font-size: 1rem;
+}
+
+#edu {
+  font-size: 0.9rem;
+}
+
+#right-col {
+  font-size: 0.9em;
+}
+
+#prj .item-header {
+
+  grid-template-columns: auto 1fr;
+  align-items: baseline;
+
+  .print-only {
+    display: none;
+    justify-self: end;
+    font-style: italic;
+  }
+
+  @media print {
+    .print-only {
+      font-size: 0.9em;
+      display: inline;
+    }
+  }
+}
+
+.sec-title {
+  color: $c-section;
+  font-family: $base-font-family;
+  font-weight: bolder;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
+
+.item {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+}
+
+.item-header {
+  display: grid;
+  align-items: end;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+.item-title {
+  font-size: 1.1em;
+
+  .fa.lg {
+    font-size: 1.2em;
+  }
+
+  .fa.sm {
+    font-size: 0.8em;
+  }
+}
+
+.date {
+  margin-bottom: 0.5em;
+  font-family: $base-font-family;
+  font-size: 0.95em;
+  color: $grey;
+  > .period {
+    font-weight: bolder;
+    text-transform: uppercase;
+  }
+}
+
+.role {
+  font-style: italic;
+  grid-column: 2 / 3;
+  justify-self: end;
+}
+
+#hobbies {
+  font-size: 0.9em;
+  display: grid;
+
+  #hob-list {
+    margin-top: 1em;
+    text-align-last: justify;
+  }
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 0.7em;
+  grid-row-gap: 0.5em;
+  margin-top: 1em;
+  align-items: baseline;
+
+  .skill-name {
+    justify-self: end;
+  }
+
+  .skill-bar-outer {
+    border: 1px solid $grey;
+    justify-self: stretch;
+    height: 7px;
+    background-color: white;
+  }
+
+  .skill-bar-inner {
+    border: 1px solid $grey;
+    height: 100%;
+    background-color: $grey;
+  }
+
+  .fa {
+    font-size: 0.7em;
+    margin-right: 0.4em;
+    color: $grey-dark;
+  }
+}
+
+
+#links-list {
+  margin-top: 1em;
+  grid-row-gap: 0.5em;
+}
+
+#acc-content {
+  margin-top: 1em;
+  display: grid;
+  grid-row-gap: 1em;
+
+  b {
+    font-weight: bolder;
+  }
+}
+
+p.quote {
+  margin-left: 2em;
+  padding-left: 0.7em;
+  border-left: 3px solid $grey-lighter;
+  color: $grey;
+  font-style: italic;
+}
+
+#rec-content {
+  margin-top: 1em;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  grid-row-gap: 1em;
+}
+
+.quote-author {
+  justify-self: end;
+  text-align: right;
+  display: block;
+}
