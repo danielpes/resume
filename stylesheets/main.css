@@ -34,6 +34,13 @@ p {
   margin: 0;
   line-height: 1.6em; }
 
+p.quote {
+  margin-left: 2em;
+  padding-left: 0.7em;
+  border-left: 3px solid #bdbdbd;
+  color: #757575;
+  font-style: italic; }
+
 b {
   font-weight: bolder; }
 
@@ -44,8 +51,19 @@ b {
     color: #424242;
     text-decoration: none; }
 
-.grid-icon {
+.fa-icon {
   justify-self: center; }
+
+.sec-title {
+  color: #2079c7;
+  font-family: "Montserrat";
+  font-weight: bolder;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem; }
+  @media print {
+    .sec-title {
+      color: #212121; } }
 
 [v-cloak] {
   visibility: hidden; }
@@ -102,6 +120,14 @@ nav {
   grid-template-columns: inherit;
   grid-template-rows: auto auto; }
 
+.main-col {
+  display: grid;
+  grid-row-gap: 1.5em;
+  align-content: space-between; }
+
+#right-col {
+  font-size: 0.9em; }
+
 #header-title {
   color: #212121;
   font: bold 2.5em "Merriweather"; }
@@ -114,18 +140,15 @@ nav {
   #header-about .info {
     color: #616161; }
 
-.main-col {
-  display: grid;
-  grid-row-gap: 1.5em;
-  align-content: space-between; }
+#contact {
+  grid-template-rows: 1fr 1fr 1fr; }
 
-#contact, #links-list {
+.icon-grid {
   display: grid;
   align-content: space-between;
   align-items: center;
   grid-column-gap: 0.7em;
   grid-row-gap: 0.3em;
-  grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1.1em auto; }
 
 #jobs {
@@ -133,9 +156,6 @@ nav {
 
 #edu {
   font-size: 0.9rem; }
-
-#right-col {
-  font-size: 0.9em; }
 
 #prj .item-header {
   grid-template-columns: auto 1fr;
@@ -148,17 +168,6 @@ nav {
     #prj .item-header .print-only {
       font-size: 0.9em;
       display: inline; } }
-
-.sec-title {
-  color: #2079c7;
-  font-family: "Montserrat";
-  font-weight: bolder;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05rem; }
-  @media print {
-    .sec-title {
-      color: #212121; } }
 
 .item {
   display: grid;
@@ -207,23 +216,27 @@ nav {
   grid-row-gap: 0.5em;
   margin-top: 1em;
   align-items: baseline; }
-  .skills-list .skill-name {
-    justify-self: end; }
-  .skills-list .skill-bar-outer {
-    border: 1px solid #757575;
-    justify-self: stretch;
-    height: 7px;
-    background-color: white; }
-  .skills-list .skill-bar-inner {
-    border: 1px solid #757575;
-    height: 100%;
-    background-color: #757575; }
-  .skills-list .fa {
+  .skills-list .fa-icon {
     font-size: 0.7em;
     margin-right: 0.4em;
     color: #616161; }
 
+.skill-name {
+  justify-self: end; }
+
+.skill-bar-outer {
+  border: 1px solid #757575;
+  justify-self: stretch;
+  height: 7px;
+  background-color: white; }
+
+.skill-bar-inner {
+  border: 1px solid #757575;
+  height: 100%;
+  background-color: #757575; }
+
 #links-list {
+  grid-template-rows: 1fr 1fr 1fr;
   margin-top: 1em;
   grid-row-gap: 0.5em; }
 
@@ -233,13 +246,6 @@ nav {
   grid-row-gap: 1em; }
   #acc-content b {
     font-weight: bolder; }
-
-p.quote {
-  margin-left: 2em;
-  padding-left: 0.7em;
-  border-left: 3px solid #bdbdbd;
-  color: #757575;
-  font-style: italic; }
 
 #rec-content {
   margin-top: 1em;

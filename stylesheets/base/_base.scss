@@ -45,6 +45,14 @@ p {
   line-height: 1.6em;
 }
 
+p.quote {
+  margin-left: 2em;
+  padding-left: 0.7em;
+  border-left: 3px solid $grey-lighter;
+  color: $grey;
+  font-style: italic;
+}
+
 b {
   font-weight: bolder;
 }
@@ -59,8 +67,20 @@ b {
   }
 }
 
-.grid-icon {
+.fa-icon {
   justify-self: center;
+}
+
+.sec-title {
+  color: $c-section;
+  font-family: $base-font-family;
+  font-weight: bolder;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  @media print {
+    color: $title-color;
+  }
 }
 
 // For Vue.js

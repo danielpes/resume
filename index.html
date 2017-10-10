@@ -47,12 +47,12 @@
                 <span class="info">{{ info.nationality }} | {{ getAge(info.dob) }} years old | {{ info.status }}</span>
                 <span class="info">Available from August 2018</span>
             </div>
-            <div id="contact">
-                <i class="grid-icon fa fa-fw fa-home" style="font-size: 1.5em"></i>
+            <div id="contact" class="icon-grid">
+                <i class="fa-icon fa fa-fw fa-home" style="font-size: 1.5em"></i>
                 <span>{{ contact.city }} | {{ contact.country }}</span>
-                <i class="grid-icon fa fa-fw fa-phone" style="font-size: 1.4em"></i>
+                <i class="fa-icon fa fa-fw fa-phone" style="font-size: 1.4em"></i>
                 <span>{{ getPhoneNumber() }}</span>
-                <i class="grid-icon fa fa-fw fa-envelope" style="font-size: 1.15em"></i>
+                <i class="fa-icon fa fa-fw fa-envelope" style="font-size: 1.15em"></i>
                 <a :href="'mailto:' + getEmail()" target="_blank">{{ getEmail() }}</a>
             </div>
         </div>
@@ -150,16 +150,16 @@
             </div>
             <div id="links">
                 <span class="sec-title">Online</span>
-                <div id="links-list">
-                    <i class="grid-icon fa fa-fw fa-linkedin-square" style="font-size: 1.4em"></i>
+                <div id="links-list" class="icon-grid">
+                    <i class="fa-icon fa fa-fw fa-linkedin-square" style="font-size: 1.4em"></i>
                     <a href="http://linkedin.com/in/danieldepaula">
                         <span>linkedin.com/in/danieldepaula</span>
                     </a>
-                    <i class="grid-icon fa fa-fw fa-github" style="font-size: 1.4em"></i>
+                    <i class="fa-icon fa fa-fw fa-github" style="font-size: 1.4em"></i>
                     <a href="http://github.com/danielpes">
                         <span>github.com/danielpes</span>
                     </a>
-                    <i class="grid-icon fa fa-fw fa-stack-overflow" style="font-size: 1.2em"></i>
+                    <i class="fa-icon fa fa-fw fa-stack-overflow" style="font-size: 1.2em"></i>
                     <a href="http://stackoverflow.com/users/3864822/">
                         <span>stackoverflow.com/users/3864822/</span>
                     </a>
