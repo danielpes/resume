@@ -1,0 +1,119 @@
+{
+  "experiences": [
+    {
+      "institution": "École Polytechnique",
+      "city": "Palaiseau",
+      "country": "France",
+      "role": "Ingénieur Big Data",
+      "period": "juillet 2016 - Actuellement",
+      "description": "Je travaille sur un projet en partenariat avec la Caisse Nationale d’Assurance Maladie française (CNAMTS) en tant que membre de l’équipe chargée de l’Initiative Data Science. Je suis un des principaux ingénieurs participant au développement d’une plateforme de traitement de Big Data avec Spark pour traiter plus de 3To de données médicales pour un usage en Machine Learning."
+    },
+    {
+      "institution": "Icaro Tech",
+      "city": "Campinas, SP",
+      "country": "Brésil",
+      "role": "Ingénieur en Recherche et Développement",
+      "period": "janvier 2015 - juin 2016",
+      "duration": "1.5 ans",
+      "description": "J’ai d’abord travaillé dans le domaine de l’analyse et la visualisation de données avec R et SQL. J’ai ensuite contribué au développement des produits de l’entreprise et à la gestion d’équipe."
+    },
+    {
+      "institution": "Icaro Tech",
+      "city": "Campinas, SP",
+      "country": "Brésil",
+      "role": "Stagiaire",
+      "period": "janvier 2014 - décembre 2014",
+      "duration": "1 an",
+      "description": "J’ai commencé en tant que stagiaire en pré-vente en travaillant avec l’estimation des coûts et PoCs. Puis, j’ai intégré le service de Recherche et Développement pour me spécialiser dans l’analyse et la visualisation de données."
+    },
+    {
+      "institution": "Lince",
+      "city": "Sao Carlos, SP",
+      "country": "Brésil",
+      "role": "Web Development Intern",
+      "period": "janvier 2012 - août 2012",
+      "duration": "8 mois",
+      "description": "J’ai contribué à la création d’outils WebNCL et d’un lecteur pour les documents multimédias du type NCL en travaillant avec Javascript, CSS et HTML."
+    }
+
+  ],
+  "education": [
+    {
+      "institution": "Université Fédéral de Sao Carlos",
+      "city": "Sao Carlos, SP",
+      "country": "Brésil",
+      "role": "Ingénierie Informatique",
+      "period": "janvier 2009 - décembre 2014",
+      "description": "Projet final sur le thème du Machine Learning dans le domaine des télécommunications."
+    },
+    {
+      "institution": "University of Birmingham",
+      "city": "Birmingham",
+      "country": "Royaume-Uni",
+      "role": "Programme d’échange universitaire",
+      "period": "septembre 2012 - août 2013",
+      "description": "Un an en tant qu’étudiant international dans un projet sur la robotique."
+    }
+  ],
+  "skills": [
+    {
+      "name": "Apache Spark",
+      "level": 9
+    },
+    {
+      "name": "Scala",
+      "level": 8
+    },
+    {
+      "name": "SQL",
+      "level": 7
+    },
+    {
+      "name": "Git",
+      "level": 7
+    },
+    {
+      "name": "Unix",
+      "level": 6
+    },
+    {
+      "name": "Web (front-end)",
+      "level": 6
+    },
+    {
+      "name": "Python",
+      "level": 5
+    },
+    {
+      "name": "Java",
+      "level": 5
+    },
+    {
+      "name": "Node.js",
+      "level": 5
+    },
+    {
+      "name": "Mach. Learning",
+      "level": 4
+    }
+  ],
+  "languages": [
+    {
+      "name": "Portugais",
+      "level": 10
+    },
+    {
+      "name": "Anglais",
+      "level": 9
+    },
+    {
+      "name": "Français",
+      "level": 8
+    },
+    {
+      "name": "Espagnol",
+      "level": 4
+    }
+  ],
+  "hobbies": ["Cinéma", "Échecs", "Jeux vidéos", "Football", "Tennis de table", "Séries télé"]
+}

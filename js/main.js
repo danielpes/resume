@@ -2,17 +2,17 @@ var app = new Vue({
     el: '#page',
     data: {
         fonts: ["Montserrat", "Lato", "Open Sans", "Merriweather"],
-        currentFont: "Montserrat",
+        currentFont: "Lato",
         currentZoom: 1,
         info: {
             name: "Daniel de Paula",
-            position: "Big Data Engineer",
-            nationality: "Brazilian",
-            status: "Married",
+            position: "Ingénieur Big Data",
+            nationality: "Brésilien",
+            status: "Marrié",
             dob: "1991-03-22"
         },
         contact: {
-            city: "Paris Area",
+            city: "Région Parisienne",
             country: "France",
             ph: ["+33", "6", "58", "61", "07", "68"],
             em: {
@@ -27,23 +27,33 @@ var app = new Vue({
         hobbies: []
     },
     created: function () {
-        var vm = this;
-        var contentsURL = "https://gist.githubusercontent.com/danielpes/e1a2ca7ad03b6bc6d0c3763988402beb/raw/";
-        $.ajax({
-            dataType: "json",
-            url: contentsURL,
-            cache: false,
-            success: function (jsonData) {
-                vm.experiences = jsonData.experiences;
-                vm.education = jsonData.education;
-                vm.skills = jsonData.skills;
-                vm.languages = jsonData.languages;
-                vm.hobbies = jsonData.hobbies;
-            }
-        });
+        this.updateContents("en");
     },
     methods: {
         print: window.print,
+        updateContents: function(language) {
+            var vm = this;
+            var contentsURL = "https://gist.githubusercontent.com/danielpes/e1a2ca7ad03b6bc6d0c3763988402beb/raw/";
+            if (language==="en") {
+                contentsURL += "cv-english";
+            } else if(language==="fr") {
+                contentsURL += "cv-francais";
+            }
+            $.ajax({
+                dataType: "json",
+                url: contentsURL,
+                cache: false,
+                success: function (jsonData) {
+                    // vm.info = jsonData.info;
+                    // vm.contact = jsonData.contact;
+                    vm.experiences = jsonData.experiences;
+                    vm.education = jsonData.education;
+                    vm.skills = jsonData.skills;
+                    vm.languages = jsonData.languages;
+                    vm.hobbies = jsonData.hobbies;
+                }
+            });
+        },
         getAge: function(dobString) {
             var dobDate = new Date(dobString);
 

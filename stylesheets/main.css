@@ -61,9 +61,6 @@ b {
   font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: 0.05rem; }
-  @media print {
-    .sec-title {
-      color: #212121; } }
 
 [v-cloak] {
   visibility: hidden; }
@@ -177,7 +174,7 @@ nav {
 
 .item-header {
   display: grid;
-  align-items: end;
+  align-items: baseline;
   margin-top: 1.2em;
   margin-bottom: 0.5em; }
 
