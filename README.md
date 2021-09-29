@@ -1,4 +1,4 @@
-# My Résumé
+# My Resume / CV
 
 This repository contains the code for my printable résumé made with web technologies. It uses the following stack:
 - HTML and CSS3 for the layout;
