@@ -1,3 +1,7 @@
+# 🚧 Under Maintenance 🚧
+
+This repository is in the process of being updated
+
 # My Resume / CV
 
 This repository contains the code for my printable résumé made with web technologies. It uses the following stack:
